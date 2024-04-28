@@ -1,0 +1,45 @@
+*--  GOOGLE FONTS : Rubik mono one  --*/
+.rubik{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+/*--  GOOGLE FONTS : Quicksand  --*/
+.quicksand-small {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.quicksand-normal {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.quicksand-big {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+/* --  CONTROLES INICIALES -- */
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #E9E2CF;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* - CABECERA y PIE de PAGINA - */
+header, footer{
+    border: 2px solid green;
+    text-align: center;
+}
+/* - MAIN - */
+main{
+    height: auto;
+    border: 2px dashed green;
+    margin: 20px;
+}
