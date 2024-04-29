@@ -6,25 +6,64 @@
     <meta name="author" content="Grupo 10 - ..." />
     <meta name="description" content="Página de un Concesionario de vehiculos" />
     <meta name="keywords" content="concesionario,vehiculos,autos,camionetas,4x4" />
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/inicio/logo.png" type="image/x-icon">
     <title>E-Cars - Página Principal</title>
-    <!---  LINKS a GOOGLE FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!----  Rubik mono one  ---->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <!----  Quicksand  ---->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
     <header>
-        <h1 class="rubik">HEADER</h1>
+
+        <nav class="navbar">
+            <div class="logo"><img src="img/inicio/logo.png" alt="logo"></div>
+            <ul>
+                <a href="#Nuevos">Nuevos</a>
+                <a href="#Usados">Usados</a>
+                <a class="contacto" href="pages/contacto.html">Contacto</a>
+            </ul>
+        </nav>
+
+        <div class="banner">
+            <img src="img/inicio/banner.jpeg" alt="banner">
+        </div>
+
     </header>
-    <main>
-        <a href="./pages/catalogoUsados.html" class=".quicksand-big">Catalogo de Usados</a>
-    </main>
+
+        <main class="container-tarjetas">
+
+            <article class="tarjetas">
+                <img id="Nuevos" src="img/inicio/nuevos.jpg" alt="nuevos"></img>
+                <h2 class="titulo">Tu sueño, más cerca</h2> <br>
+                <p>Unimos las marcas líderes del mercado en un mismo lugar. <br>
+                En E-cars tenemos distintas opciones para cada usuario. Entrá, buscá el vehiculo que prefieras y contactate con nosotros.</p> <br>
+                <a class="boton" href="pages/catalogoNuevos.html">Conoce más</a>
+            </article>
+
+            <article class="tarjetas">
+                <img id="Usados" src="img/inicio/usados.jpg" alt="usados"></img>
+            <h2 class="titulo">Variedad de usados</h2> <br>
+            <p>Contamos con una amplia selección que se adapta a todos los gustos y presupuestos, desde modelos icónicos hasta las últimas tendencias. Descubre opciones de marcas reconocidas.</p> <br>
+            <a class="boton" href="pages/catalogoUsados.html">Conoce más</a>
+            </article>
+    
+        </main>
+    
+
     <footer>
-        <h1 class="rubik"> FOOTER</h1>
+
+        <div class="container-footer">
+            <h2 class="titulo">Seguinos en nuestras redes</h2>
+
+            <div class="redes">
+                <a href="#"><img src="img/inicio/facebook.svg" alt="facebbok"></a>
+                <a href="#"><img src="img/inicio/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="img/inicio/x.svg" alt="x"></a>
+            </div>
+            
+            <p class="titulo">© E-Cars 2024</p>
+        </div>
+       
     </footer>
 </body>
 </html>
