@@ -10,11 +10,7 @@ hr {
     color: #F9C22E;
 }
 
-.seccionFormInfoContacto {
-    display: flex;
-    flex-direction: column;
-}
-.seccionFormDatosVehiculos {
+.seccionFormInfoContacto, .seccionFormDatosVehiculos {
     display: flex;
     flex-direction: column;
 }

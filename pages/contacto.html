@@ -20,7 +20,8 @@
         <section class="my-4">
             <h1 class="display-1">Vendé tu vehiculo en E-Cars</h1>
             <h2 class="h2">¿Listo para vender tu auto usado?</h2>
-            <p class="lead">Completa nuestro formulario y déjanos ocuparnos del resto. En E-Cars Usados, hacemos que vender tu
+            <p class="lead">Completa nuestro formulario y déjanos ocuparnos del resto. En E-Cars Usados, hacemos que
+                vender tu
                 vehículo sea rápido y sencillo.
             </p>
         </section>
@@ -30,34 +31,37 @@
                     <legend>Información de Contacto</legend>
                     <div class="mb-3 px-2">
                         <label for="inputNombre" class="form-label">Nombre*</label>
-                        <input type="text" id="inputNombre" name="Nombre" class="form-control" placeholder="Ingrese su nombre..." required>
+                        <input type="text" id="inputNombre" name="Nombre" class="form-control"
+                            placeholder="Ingrese su nombre..." required>
                     </div>
                     <div class="mb-3 px-2">
                         <label for="inputApellido" class="form-label">Apellido*</label>
-                        <input type="text" id="inputApellido" name="Apellido" class="form-control" placeholder="Ingrese su apellido..." required>
+                        <input type="text" id="inputApellido" name="Apellido" class="form-control"
+                            placeholder="Ingrese su apellido..." required>
                     </div>
                     <div class="mb-3 px-2">
                         <label for="inputEmail" class="form-label">Correo Electrónico*</label>
-                        <input type="email" id="inputEmail" name="Email" class="form-control" placeholder="Ingrese su correo electrónico..." required>
+                        <input type="email" id="inputEmail" name="Email" class="form-control"
+                            placeholder="Ingrese su correo electrónico..." required>
                     </div>
                     <div class="mb-3 px-2">
                         <label for="inputTelefono" class="form-label">Teléfono*</label>
-                        <input type="tel" id="inputTelefono" name="Telefono" class="form-control" placeholder="Ingrese su telefono..." required>
+                        <input type="tel" id="inputTelefono" name="Telefono" class="form-control"
+                            placeholder="Ingrese su telefono..." pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                     <hr>
                 </fieldset>
                 <fieldset>
                     <legend>Tipo de vehículo</legend>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Automóvil" name="tipoVehiculo" value="Automóvil" />
+                        <input class="form-check-input" type="radio" id="Automóvil" name="tipoVehiculo"
+                            value="Automóvil" />
                         <label class="form-check-label" for="Automóvil">Automóvil</label>
                     </div>
-
                     <div class="form-check">
                         <input class="form-check-input" type="radio" id="SUV" name="tipoVehiculo" value="SUV" />
                         <label class="form-check-label" for="SUV">SUV</label>
                     </div>
-
                     <div class="form-check">
                         <input class="form-check-input" type="radio" id="Pickup" name="tipoVehiculo" value="Pickup" />
                         <label class="form-check-label" for="Pickup">Pickup</label>
@@ -69,7 +73,8 @@
                     <div>
                         <div class="mb-3 px-2">
                             <label for="selectMarca" class="form-label">Marca</label>
-                            <select id="selectMarca" name="Marca" aria-label="Selector de Marca" class="form-select" required>
+                            <select id="selectMarca" name="Marca" aria-label="Selector de Marca" class="form-select"
+                                required>
                                 <option selected disabled hidden>Marca...</option>
                                 <option value="Volkswagen">Volkswagen</option>
                                 <option value="Toyota">Toyota</option>
@@ -90,7 +95,8 @@
                         </div>
                         <div class="mb-3 px-2">
                             <label for="selectModelo" class="form-label">Modelo</label>
-                            <select id="selectModelo" name="Modelo" aria-label="Selector de Modelo" class="form-select" required>
+                            <select id="selectModelo" name="Modelo" aria-label="Selector de Modelo" class="form-select"
+                                required>
                                 <option selected disabled hidden>Modelo...</option>
                                 <option value="Gol">Gol</option>
                                 <option value="Saveiro">Saveiro</option>
@@ -98,13 +104,14 @@
                         </div>
                         <div class="mb-3 px-2">
                             <label for="inputAnio" class="form-label">Año*</label>
-                            <input type="number" id="inputAnio" name="Anio" placeholder="Ingrese el año del vehiculo..." class="form-control" required>
+                            <input type="number" id="inputAnio" name="Anio" placeholder="Ingrese el año del vehiculo..."
+                                class="form-control" min="1900" max="2024" required>
                         </div>
                     </div>
-
                     <div class="mb-3">
                         <label for="inputDesc" class="form-label">Descripción del vehiculo</label>
-                        <textarea name="Descripcion" id="inputDesc" rows="10" class="form-control" placeholder="Escriba algunos detalles y caracteristicas adicionales de su vehiculo..."></textarea>
+                        <textarea name="Descripcion" id="inputDesc" rows="10" class="form-control"
+                            placeholder="Escriba algunos detalles y caracteristicas adicionales de su vehiculo..." maxlength="500"></textarea>
                     </div>
                     <hr>
                 </fieldset>
@@ -113,44 +120,43 @@
         </section>
         <section class="my-4">
             <h2 class="display-2">Nuestros datos de contacto</h2>
-            <ul>
-                <li>
+            <ul class="list-unstyled">
+                <li class="list-item">
                     <dl>
-                        <dt>Dirección:</dt>
+                        <dt>Dirección</dt>
                         <dd>Calle Ejemplo 123, Ciudad Ejemplo, Argentina</dd>
                     </dl>
                 </li>
-                <li>
+                <li class="list-item">
                     <dl>
                         <dt>Correo electrónico:</dt>
                         <dd>Ventas@ecars.com</dd>
                     </dl>
                 </li>
-
-                <li>
+                <li class="list-item">
                     <dl>
                         <dt>Teléfono:</dt>
                         <dd>(123) 456-7890</dd>
                     </dl>
                 </li>
-                <li>
+                <li class="list-item">
                     <dl>
                         <dt>Horarios de atención:</dt>
                         <dd>
-                            <ul>
-                                <li>
+                            <ul class="list-group">
+                                <li class="list-group-item">
                                     <dl>
                                         <dt>Lunes a Viernes:</dt>
                                         <dd>9:00 AM - 6:00 PM</dd>
                                     </dl>
                                 </li>
-                                <li>
+                                <li class="list-group-item">
                                     <dl>
                                         <dt>Sábados:</dt>
                                         <dd>9:00 AM - 1:00 PM</dd>
                                     </dl>
                                 </li>
-                                <li>
+                                <li class="list-group-item">
                                     <dl>
                                         <dt>Domingos:</dt>
                                         <dd>Cerrado</dd>
@@ -161,10 +167,12 @@
                     </dl>
                 </li>
             </ul>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14241.607812313414!2d-65.20570236942137!3d-26.827164881687498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1714083654023!5m2!1ses-419!2sar"
-                width="260" height="260" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="w-100">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14241.607812313414!2d-65.20570236942137!3d-26.827164881687498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1714083654023!5m2!1ses-419!2sar"
+                    frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
     <!-- <footer>Footer</footer> -->
