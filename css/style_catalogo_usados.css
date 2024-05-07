@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap');
+
+:root {
+    --primary: #eb0a1e;
+    --secondary: #f9c22e;
+    --light: #e9e2cf;
+    --dark: #0c090d;  
+}
+/* --  CONTROLES INICIALES -- */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html,button{
+    background-color: var(--light);
+    font-family: "Quicksand", sans-serif;
+}
+/* AGREGADO DESDE INDEX*/
+/*----------HEADER--------------*/
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary);
+    font-family: "Rubik Mono One", monospace;
+}
+.navbar ul a{
+    color: var(--light);
+    font-size: 1em;
+}
+.navbar ul a:hover{
+    color: var(--secondary);
+}
+.navbar ul .contacto{
+    margin-right: 10px;
+    color: var(--secondary);
+}
+.navbar ul .contacto:hover{
+    color: var(--light);
+}
+.logo img{
+    width: 60px;
+    margin-left: 15px;
+}
+.banner img {
+    width: 100vw;
+    height: 100vh;
+}
+/*----------FOOTER--------------*/
+footer {
+    width: 100vw;
+    background: var(--dark);
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer img {
+    width: 50px;
+    padding: 2%;
+    margin: 15px auto;
+}
+
+footer .redes {
+    display:flex;
+justify-content: space-between;
+}
+
+/*------------------------------*/
+/* - MAIN - */
+.tarjetas_bot{ display: none; }
+#posBot{
+    width: 100vw;
+    display: grid;
+    align-self: center;
+    align-content: center;
+}
+.botones{
+    height: auto;
+    display: grid;
+    grid-template-columns: 6vw 40vw 8vw 40vw 6vw;
+}
+button{
+    height: 2rem;
+    font-weight: 500;
+    border: 2px solid var(--primary);
+    border-radius: .8rem;
+    margin: 0.5rem 1rem;
+    box-shadow: 3px 3px sienna;
+}
+button:active {
+    box-shadow: 0 0;
+}
+.botones .mensaje{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    border: 0;
+    border-radius: 0;
+    padding-left: 1.5rem;
+    text-align: left;
+    font-size: x-large;
+    font-weight: 600;
+    box-shadow: 0 0;
+}
+.botones #filtros{
+    display: grid;
+    grid-template-columns: 3% 20% 3% 46% 3% 25%;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    margin: 1rem 0 1rem 0;
+}
+.botones #filtros select, 
+.botones #filtros button{
+    border: 2px solid var(--dark);
+    border-radius: .5rem;
+    height: 1.5rem;
+    text-align: center;
+}
+.botones #filtros select{
+    margin-top: .5rem;
+}
+.botones #filtros button{
+    background-color: white;
+}
+.principal .botones button,
+.botones #filtros select,
+.botones #filtros button{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+/*-----------------------------------------------*/
+.principal #ofertas{
+    width: 95vw;
+    margin-left: 5vw;
+    margin-bottom: 2rem;
+}
+#ofertas .card_titulo h3{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+.card_sm{
+    display: grid;
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    margin: 5px 0;
+    width: 42vw;
+    height: auto;
+    justify-items: center;
+    overflow: auto;
+}
+.card_sm h4{
+    padding-top: 3px;
+    padding-left: 5px;
+}
+.card_sm img{
+    width: 92%;
+    height: auto;
+    border: 1px solid var(--dark);
+    border-radius: 0.8rem;
+}
+.card_sm h3{
+    padding-left: 8px;
+}
+#persiana{
+    width: 85vw;
+    height: fit-content;
+    display: none;
+    grid-template-columns: 35vw 65vw;
+    margin-left: 7vw;
+}
+#persiana .msje .icoBack a img{
+    margin-left: .6rem;
+}
+#persiana div h4#elegido{
+    text-align: center;
+    margin-top: 1rem;
+}
+#persiana div h4#elegido2{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+#persiana .relleno2{
+    border-bottom: 2px solid var(--primary);
+}
+#templateMustacheOfertas{
+    width: 85vw;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+#persiana div img{
+    border: 2px solid var(--dark);
+    border-radius: 10px;
+    width: 180px;
+}
+#persiana .msje{
+    display: grid;
+    grid-template-columns: 90% 10%;
+
+}
+#templateMustache .op{
+    display: grid;
+    grid-template-columns: 22vw 56vw 7vw;
+    border-bottom: 2px solid var(--primary);
+    padding: 5px 0 3px 0;
+}
+.op #imagen img{
+    width: 19vw;
+    margin-left: 0.4rem;
+}
+.op p {
+    width: 84vw;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+/* --- ES PARA TABLET --- */
+@media screen and (min-width:768px) {
+    .tarjetas_bot{ display: none; }
+    #posBot .botones #RELLENO{ display: none; }
+    .principal{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 25vw 75vw;
+    }
+    #posBot{
+        width: 25vw;
+        display: grid;
+    }
+    #posBot .botones, .botones #filtros{
+        display: block;
+        margin-left: 1rem;
+    }
+    button{
+        margin-top: 1rem;
+        width: 21vw;
+        height: 2rem;
+    }
+    .botones #filtros button{
+        width: 5rem;
+        margin-left: 0;
+    }
+    #ofertas{
+        width: 100%;
+    }
+    .principal #ofertas{
+        width: 75vw;
+        margin-left: 0;
+    }
+    .card_titulo{
+        margin: 1.8rem 0 1rem 0;
+    }
+    #templateMustacheOfertas{
+        display: grid;
+        grid-template-columns: 43% 43%;
+        justify-items: center;
+    }
+    .card_sm{
+        width: 32vw;
+    }
+    /*-----------------------------------------*/
+    #persiana{
+        width: 70vw;
+        margin-left: 1rem;
+    }
+    #templateMustache .op{
+        display: grid;
+        grid-template-columns: 25vw 40vw 5vw ;
+    }
+    #templateMustache .op #imagen img{
+        width: 22vw;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-left: .4rem;
+    }
+    #templateMustache .op p{
+        width: 66vw;
+        margin-left: 2rem;
+    }
+}
+
+/*ES PARA ESCRITORIO*/
+@media screen and (min-width:1200px) {
+    div#posBot div.botones{ display: none}
+    div.principal{ display: block; }
+   
+    #posBot{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1;
+    }
+    #templateMustacheOfertas{
+        width: 84vw;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        margin-left: 7rem;
+    }
+    .card_sm{
+        width: 95%;
+    }
+    .card_titulo{
+        width: 84vw;
+        height: auto;
+        margin-left: 7rem;
+    }
+    .card_sm img{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    /*-------------------------------------------*/
+    .tarjetas_bot{
+        width: 92vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: 23vw 23vw 23vw 23vw;
+        margin-left: 4vw;
+    }
+    .tarjetas_bot .tarj_titulo{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .tarjetas_bot .tarj_titulo h4{
+        font-size: x-large;
+        margin: 1.4rem 0 1.1rem 3rem;
+    }
+    .tarjetas_bot .icoUp{
+        margin-top: 0.6rem;
+        margin-left: 12rem;
+    }
+    .tarjetas_bot .tarj_bot{
+        border: 2px solid var(--primary);
+        border-radius: 15px;
+        margin: 0.4rem 0.4rem 0.4rem 0.4rem;
+        justify-content: center;
+    }
+    .tarjetas_bot .tarj_bot img{
+        width: 92%;
+        border: 1px solid var(--dark);
+        border-radius: 7px;
+        margin: 0.7rem;
+    }
+    .tarjetas_bot .tarj_bot .boton{
+        font-weight: 700;
+        width: 77%;
+        margin-top: 0;
+        margin-left: 2.4rem;
+    }
+    .tarjetas_bot #filtros{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tarjetas_bot #filtros select{
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        height: 1.8rem;
+        border-radius: 0.7rem;
+        margin-top: 1rem;
+    }
+    .tarjetas_bot #filtros button{
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        width: 7vw;
+        background-color: white;
+        border-color: var(--dark);
+        border-radius: 0.7rem;
+    }
+    .tarjetas_bot #filtros #años2{
+        width: 7vw;
+    }
+    /*-------------------------------------------*/
+    #persiana{
+        width: 70vw;
+        margin-left: 12rem;
+    }
+    #persiana .relleno2{
+        border-bottom: 2px solid var(--primary);
+    }
+    #persiana #templateMustache .op{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20vw 43vw 3vw;
+        grid-gap: 1rem;
+        border-bottom: 2px solid var(--primary);
+        padding: 7px 0 3px 20px;
+    }
+    #persiana #templateMustache .op #imagen img{
+        width: 19.5vw;
+        margin-top: .6vw;
+    }
+    #templateMustache .op p{
+        width: 100%;
+        margin-left: 2rem;
+    }
+}
