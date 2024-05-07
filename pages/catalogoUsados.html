@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grupo 10 - ..." />
+    <meta name="description" content="Página de un Concesionario de vehiculos" />
+    <meta name="keywords" content="concesionario,vehiculos,autos,camionetas,4x4" />
+    <link rel="shortcut icon" href="../img/inicio/logo.png" type="image/x-icon">
+    <title>E-Cars - Tu concesionario</title>
+    <link rel="stylesheet" href="../css/style_catalogo_usados.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../img/inicio/logo.png" alt="logo">
+            </div>
+            <ul>
+                <a href="#Nuevos">Nuevos</a>
+                <a href="../pages/catalogoUsados.html">Usados</a>
+                <a class="contacto" href="../pages/contacto.html">Contacto</a>
+            </ul>
+        </nav>
+
+        <div class="banner">
+            <img src="../img/inicio/banner.jpeg" alt="banner">
+        </div>
+    </header>
+    <main>
+        <div class="principal">
+            <!---------------------------------------->
+            <div id="posBot">
+                <div class="botones">
+                    <button class="mensaje">Elija su tipo:</button>
+                    <div id="RELLENO"></div>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="Compactos">Compactos 3 puertas</button>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="Sedan">Sedan 4 puertas</button>
+                    <div id="RELLENO"></div>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="Cabriolets">Cabriolets</button>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="SUV's">SUV's</button>
+                    <div id="RELLENO"></div>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="Hatchbacks">Hatchbacks</button>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="Camionetas">Camionetas</button>
+                    <div id="RELLENO"></div>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="Vans">Van Cargo</button>
+                    <div id="RELLENO"></div>
+                    <button class="boton" id="Camiones">Camiones</button>
+                    <div id="RELLENO"></div>
+                    <div id="filtros">
+                        <div></div>
+                        <select id="años1" name="año">
+                            <option value="0">Año</option>
+                        </select>
+                        <div></div>
+                        <select id="marcas1" name="marca">
+                            <option value="0">Marca</option>
+                        </select>
+                        <div></div>
+                        <button onclick="filtro(true)">Filtrar</button>
+                    </div>
+                </div>
+                <!---------------------------------------->
+                <div class="tarjetas_bot">
+                    <div class="tarj_titulo">
+                        <h4>Elija tipo de vehiculo:</h4>
+                    </div>
+                    <div class="icoUp">
+                        <span>Inicio</span>
+                        <br>
+                        <a href="../index.html">
+                            <img src="../img/square-alt-arrow-up.svg" style="width:35px; border:0px">
+                        </a>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Compactos.jpg" alt="Compactos">
+                        <button class="boton" id="Compactos">Compactos 3 puertas</button>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Sedans.jpg" alt="Sedans">
+                        <button class="boton" id="Sedan">Sedan 4 puertas</button>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Cabriolets.jpg" alt="Cabriolets">
+                        <button class="boton" id="Cabriolets">Cabriolets</button>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Suvs.jpg" alt="SUV's">
+                        <button class="boton" id="SUV's">SUV's</button>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Hatchbacks.jpg"  alt="Hatchback">
+                        <button class="boton" id="Hatchbacks">Hatchbacks</button>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Pickups.jpg" alt="Camionetas">
+                        <button class="boton" id="Camionetas">Camionetas</button>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Cargo.jpg" alt="Vans">
+                        <button class="boton" id="Vans">Van Cargo</button>
+                    </div>
+                    <div class="tarj_bot">
+                        <img src="../img/catalogo_usados/Camiones.jpg" alt="Camiones">
+                        <button class="boton" id="Camiones">Camiones</button>
+                    </div>
+                    <div id="filtros">
+                        <div></div>
+                        <select id="años2" name="año">
+                            <option value="0">Año</option>
+                        </select>
+                        <div></div>
+                        <select id="marcas2" name="marca">
+                            <option value="0">Marca</option>
+                        </select>
+                        <div></div>
+                        <button onclick="filtro(false)">Filtrar</button>
+                    </div>
+                </div>
+                <!---------------------------------------->
+            </div>
+            <!---------------------------------------->
+            <div id="ofertas">
+                <div class="card_titulo">
+                    <h3>OFERTAS</h3>
+                </div>
+                <!------------------------------------------------------>
+                <!--  Renderizado de Mustache -->
+                <div id="templateMustacheOfertas"></div>
+                <!------------------------------------------------------>
+            </div>
+            <!---------------------------------------->
+            <div id="persiana">
+                <div class="msje">
+                    <h4 id="elegido">---</h4>
+                    <div class="icoBack">
+                        <span>Atrás</span>
+                        <a href="../pages/catalogoUsados.html" alt= "Volver">
+                            <img src="../img/square-alt-arrow-upa.svg" style="width:25px; border:0px">
+                        </a>
+                    </div>
+                    <h4 id="elegido2" style="display: none;">---<br></h4>
+                    <div class="relleno2"></div>
+                    <div class="relleno2"></div>
+                </div>
+                <!------------------------------------------------------>
+                <!--  Renderizado de Mustache -->
+                <div id="templateMustache"></div>
+                <!------------------------------------------------------>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+        <div class="container-footer">
+            <h2 class="titulo">Seguinos en nuestras redes</h2>
+
+            <div class="redes">
+                <a href="#"><img src="../img/inicio/facebook.svg" alt="facebbok"></a>
+                <a href="#"><img src="../img/inicio/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="../img/inicio/x.svg" alt="x"></a>
+            </div>
+            
+            <p class="titulo">© E-Cars 2024</p>
+        </div>
+       
+    </footer>
+    <!-----SCRIPT DE MUSTACHE : Se gregara a la pagina -->
+        <!---- templateMustacheOfertas --->
+        <script type="tmpl/mustache" id="tmplOfertas">
+            {{#ofertas}}
+                <div class="card_sm">
+                    <h4><span>{{marca}}</span> <span>-</span> <span>{{modelo}}</span></h4>
+                    <img src="../img/catalogo_usados/ofertas/{{imagen}}" alt="OFERTAS">
+                    <h4><span>Año: </span><span>{{año}}</span></h4>
+                    <h4><span>$ </span><span>{{precio}}<span></h4>
+                </div>
+            {{/ofertas}}
+        </script>
+        <!--- templateMustache --->
+        <script type="tmpl/mustache" id="tmplVehiculos">
+            {{#vehiculos}}
+                <div class='op'>
+                    <div id="imagen">
+                        <img src="../img/catalogo_usados/{{tipo}}/{{rutaImagen}}" alt="{{imagenAlt}}">
+                    </div>
+                    <div id="descripcion">
+                        <h2> <img src="../img/Punto.svg" style="width:20px; border:0px; margin-top:3px">
+                            <span>  </span><span>{{modelo}}</span> <span>-</span> <span>{{marca}}</span></h2>
+                        <h2><span>$</span> <span>{{precio}}</span></h2>
+                        <h3><span>{{kms}}</span><span>Km</span> <span>-</span> <span>Año: </span><span>{{año}}</span></h3>
+                        <h3><span>Modelo:</span> <span>{{modelo_detalle}}</span></h3>
+                        <br/>
+                    </div>
+                    <div class="volver">
+                        <a href="../pages/catalogoUsados.html" alt= "Volver">
+                            <img src="../img/square-alt-arrow-up.svg" style="width:25px; border:0px">
+                        </a>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda obcaecati reprehenderit architecto iste soluta quibusdam nobis inventore mollitia, qui similique laudantium illum nihil dolor? 
+                    </p>
+                </div>
+            {{/vehiculos}}
+        </script>
+        <!------------------------------------------------------------------------------->
+    <script src="../js/Mustache_4_0_1.js"></script>
+    <script src="../js/catalogo_usados.js"></script>
+</body>
+</html>
