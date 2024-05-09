@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap');
+
+:root {
+    --primary: #eb0a1e;
+    --secondary: #f9c22e;
+    --light: #e9e2cf;
+    --dark: #0c090d;  
+}
+
+.carousel img{
+max-height: 1000px;
+overflow: auto;
+}
+
+/* .banner0km{
+width: 90%;
+max-width: 120em;
+padding: 2em;
+}
+.banner0km .carru-0km{
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em;
+
+    transition: all 0.5s;
+    transform: translate(0%);
+   
+}
+.banner0km .img{
+width: calc(100%/2);
+}
+
+.banner0km .puntoscarru{
+width: 50%;
+background-color: #eb0a1e;
+padding: 2em;
+display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+align-items: center;
+}
+
+.banner0km .puntocarru{
+    width: 2em;
+    height: 2em;
+    background-color: blue;
+    margin: 1em;
+}
+
+.banner0km .puntocarru.activo{
+    background-color: orange;
+} */
