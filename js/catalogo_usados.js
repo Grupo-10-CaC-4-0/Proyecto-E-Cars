@@ -362,7 +362,7 @@ let datos = {
         imagenAlt: 'VITO',
         precio: '18.000.000',
         modelo: 'VITO',
-        marca: 'Mercedez Benz',
+        marca: 'Mercedes Benz',
         kms: '86.000',
         año: 2022,
         modelo_detalle: '1.6 Cdi'
@@ -731,7 +731,7 @@ let datos = {
         imagenAlt: 'TAOS',
         precio: '18.750.000',
         modelo: 'TAOS',
-        marca: 'Voklswagen',
+        marca: 'Volkswagen',
         kms: '55.000',
         año: 2020,
         modelo_detalle: 'Trendline'
@@ -814,7 +814,7 @@ let datos = {
         imagenAlt: 'GOLF',
         precio: '18.600.000',
         modelo: 'GOLF',
-        marca: 'Volklswagen',
+        marca: 'Volkswagen',
         kms: '18.000',
         año: 2022,
         modelo_detalle: 'GTI'
