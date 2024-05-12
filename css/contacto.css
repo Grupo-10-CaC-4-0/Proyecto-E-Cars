@@ -19,21 +19,23 @@ legend {
 }
 
 .btn-primario {
+    border-color: var(--primary);
+    border-radius: 1rem;
+    background: var(--secondary);
     padding: 1rem;
-    border-color: #EB0A1E;
-    border-radius: 2rem;
-    color: #E9E2CF;
-    background-color: #EB0A1E;
+    font-weight: 500;
+    color: var(--primary);
 }
 
 .btn-primario:hover {
-    background-color: #F73B4B;
+    background-color: var(--primary);
+    color: var(--secondary);
     font-weight: 800;
 }
 
 .btn-primario:active {
     background-color: #890611;
-    border: 2px solid #EB0A1E;
+    border: 2px solid var(--secondary);
     font-weight: 800;
 }
 
