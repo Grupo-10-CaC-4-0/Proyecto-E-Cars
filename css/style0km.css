@@ -4,16 +4,204 @@
     --primary: #eb0a1e;
     --secondary: #f9c22e;
     --light: #e9e2cf;
-    --dark: #0c090d;  
+    --dark: #0c090d;
 }
 
-.carousel img{
-max-height: 480px;
+/* --  CONTROLES INICIALES -- */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-.banner0km{
-    /* margin-top: 0.5%;
-    margin-left: 0.5%;
-    margin-right: 0.5%; */
+html,
+body {
+    background-color: var(--light);
+    font-family: "Quicksand", sans-serif;
+}
+
+
+.carousel img {
+    max-height: 480px;
+}
+
+.banner0km {
     max-height: auto;
+}
+
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.carousel-caption h5 {
+    text-shadow: 8px 8px 7px black;
+    /* font-size: 2em; */
+}
+
+.carousel-caption p {
+    text-shadow: 8px 8px 7px black;
+    /* font-size: 1.5em; */
+}
+
+.titulo0km {
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 7px grey;
+}
+
+.producto0km {
+
+    display: flex;
+    flex-direction: row;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.producto0km button {
+    height: 2rem;
+    border: 2px solid var(--primary);
+    border-radius: .8rem;
+    margin: 0.5rem 1rem;
+    background-color: white;
+}
+
+.producto0km button:active {
+    box-shadow: 0 0;
+}
+
+.producto0km button,
+.producto0km #filtros select,
+.producto0km #filtros button {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    box-shadow: 2px 2px sienna;
+}
+
+.producto0km #filtros option {
+    color: black;
+    background-color: var(--light);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
+
+.filtro0km {
+    width: 20vw;
+    margin: 0.5%;
+}
+
+#filtros select,
+#filtros button {
+    border: 2px solid var(--dark);
+    border-radius: .5rem;
+    height: 1.5rem;
+    text-align: center;
+}
+
+#filtros select {
+    margin-top: .5rem;
+}
+
+#filtros button {
+    background-color: white;
+}
+
+
+
+.barralateral0km {
+    display: flex;
+    flex-direction: column;
+}
+
+.barralateral0km div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.loop0km {
+    width: 78vw;
+    margin: 0.5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card0km {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    margin: 0 0 1em;
+}
+
+.card0km img{
+    overflow: hidden;
+}
+
+.card0km li{
+    color: grey;
+}
+
+
+
+
+
+/* ------------------------- para moviles ------------------- */
+
+@media screen and (max-width:768px) {
+    .titulo0km {
+        font-size: 1.15rem;
+        margin-top: 5vw;
+    }
+
+    .producto0km {
+
+        display: flex;
+        flex-direction: column;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .filtro0km {
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        margin: 2.5vw;
+    }
+
+    .barralateral0km {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .barralateral0km div {
+        width: 45vw;
+    }
+
+    .barralateral0km button {
+        width: 90vw;
+    }
+
+    #filtros select,
+    #filtros button {
+        border: 2px solid var(--dark);
+        border-radius: .5rem;
+        height: 1.5rem;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .loop0km{
+        width: 100vw;
+    }
+
+
 }
