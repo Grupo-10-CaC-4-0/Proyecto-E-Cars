@@ -143,8 +143,16 @@ body {
     overflow: hidden;
 }
 
+.card0km ul{
+    margin-left: 15%;
+}
 .card0km li{
     color: grey;
+    text-align: left;
+}
+.titcard0km{
+    margin-left: 10%;
+text-align: left;
 }
 
 
