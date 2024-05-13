@@ -21,6 +21,8 @@ body {
 }
 
 
+/* -------> baner carrusel <------- */
+
 .carousel img {
     max-height: 480px;
 }
@@ -45,6 +47,10 @@ body {
     text-shadow: 8px 8px 7px black;
     /* font-size: 1.5em; */
 }
+
+
+/* ------> main: titulo filtros y loop <------- */
+
 
 .titulo0km {
     display: flex;
@@ -90,7 +96,7 @@ body {
 
 .filtro0km {
     width: 20vw;
-    margin: 0.5%;
+    margin: 0.5%;    
 }
 
 #filtros select,
@@ -114,6 +120,8 @@ body {
 .barralateral0km {
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top:0;
 }
 
 .barralateral0km div {
@@ -155,15 +163,26 @@ body {
 text-align: left;
 }
 
+/* <------- para tablets -------> */
+
+@media screen and (max-width:1200px){
+
+    .titulo0km {
+        font-size: 2rem;
+        margin-top: 1vw;
+    }
+
+} 
 
 
 
 
-/* ------------------------- para moviles ------------------- */
+
+/* <------- para moviles -------> */
 
 @media screen and (max-width:768px) {
     .titulo0km {
-        font-size: 1.15rem;
+        font-size: 1.5rem;
         margin-top: 5vw;
     }
 
@@ -181,9 +200,12 @@ text-align: left;
         flex-direction: row;
         width: 90vw;
         margin: 2.5vw;
+        position: sticky;
+        top:0;
     }
-
+    
     .barralateral0km {
+        background-color: var(--light);
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

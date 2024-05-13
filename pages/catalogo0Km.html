@@ -20,7 +20,7 @@
   <title>catalogo 0Km | E-Cars</title>
 </head>
 
-<body onload="lookcards()">
+<body onload="loadcards()">
 
   <header>
 
@@ -116,52 +116,31 @@
     <div class="producto0km">
       <div class="filtro0km">
         <div class="barralateral0km">
-
+          
+          <!-- filtros por funcion cagarfiltros -->
           <!-- filtro marca -->
-          <div class="marcafiltro" id="filtros">
-            <select id="" name="marca">
-              <option value="0">Marca</option>
-              <option value="0">Fiat</option>
-              <option value="0">Nissan</option>
-            </select>
+          <div id="filtros">
+            <select class="marcafiltro" id="selectfiltro" name="marca">
+              </select>
           </div>
           <!-- filtro Modelo -->
-          <div class="modelofiltro" id="filtros">
-            <select id="" name="">
-              <option value="0">Modelo</option>
-              <option value="0">Cronos</option>
-              <option value="0">Frontier</option>
-              <option value="0">Kangoo Stepway</option>
+          <div id="filtros">
+            <select class="modelofiltro" id="selectfiltro" name="">
             </select>
           </div>
-
-
           <!-- filtro segmento -->
-          <div class="segmentofiltro" id="filtros">
-            <select id="" name="">
-              <option value="0">Segmento</option>
-              <option value="0">Pick Up</option>
-              <option value="0">Hatchback</option>
-              <option value="0">Sedan</option>
-              <option value="0">Utilitario</option>
-              <option value="0">Suv</option>
+          <div id="filtros">
+            <select class="segmentofiltro" id="selectfiltro" name="">
             </select>
           </div>
           <!-- filtro Combustible -->
-          <div class="combustiblefiltro" id="filtros">
-            <select id="" name="">
-              <option value="0">Combustible</option>
-              <option value="0">Diesel</option>
-              <option value="0">Nafta</option>
-              <option value="0">Electrico</option>
+          <div id="filtros">
+            <select class="combustiblefiltro" id="selectfiltro" name="">
             </select>
           </div>
           <!-- filtro Transmisión -->
-          <div class="transmisionfiltro" id="filtros">
-            <select id="" name="">
-              <option value="0">Transmisión</option>
-              <option value="0">Manual</option>
-              <option value="0">Automatica</option>
+          <div id="filtros">
+            <select class="transmisionfiltro" id="selectfiltro" name="">
             </select>
           </div>
           <!-- boton que ejecuta el filtro -->
