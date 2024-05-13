@@ -1,12 +1,12 @@
 .formVehiculo {
-    background-color: #0C090D;
+    background-color: var(--dark);
     color: white;
     border-radius: 1rem;
     padding: 1rem;
 }
 
 hr {
-    color: #F9C22E;
+    color: var(--secondary);
 }
 
 .seccionFormInfoContacto, .seccionFormDatosVehiculos {
@@ -15,7 +15,7 @@ hr {
 }
 
 legend {
-    color: #F9C22E;
+    color: var(--secondary);
 }
 
 .btn-primario {
@@ -41,20 +41,20 @@ legend {
 
 .form-control,
 .form-select {
-    background-color: #E9E2CF;
+    background-color: var(--light);
     border: 1px rgba(251, 215, 116, .30) dashed;
 }
 
 .form-control:focus {
-    background-color: #E9E2CF;
+    background-color: var(--light);
     border-color: #FBD774;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(251, 215, 116, .25);
 }
 
 .form-check-input:checked {
-    background-color: #F9C22E;
-    border-color: #F9C22E;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 .form-check-input:focus,
