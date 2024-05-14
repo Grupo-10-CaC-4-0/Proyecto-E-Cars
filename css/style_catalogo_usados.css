@@ -103,7 +103,7 @@ main{
     grid-template-columns: 5vw 42vw 6vw 42vw 5vw;
     margin-top: 3.5rem;
 }
-button{
+.botones button{
     height: 2rem;
     font-weight: 500;
     border: 2px solid var(--primary);
@@ -266,6 +266,7 @@ button:active {
     #posBot{
         width: 25vw;
         display: grid;
+        align-self: flex-start;
     }
     #posBot .botones, .botones .filtros{
         display: block;
@@ -275,6 +276,9 @@ button:active {
         margin-top: 1rem;
         width: 21vw;
         height: 2rem;
+    }
+    .botones .filtros #marcas1{
+        width: 20vw;
     }
     .botones .filtros button{
         width: 5rem;
@@ -330,9 +334,6 @@ button:active {
 }
 
 /*ES PARA ESCRITORIO*/
-/*
-.Compactos, .Sedans, .Cabriolets, .SUV\'s, .Hatchbacks, .Camionetas, .Vans, .Camiones{}
-*/
 @media screen and (min-width:1200px) {
     div#posBot div.botones{ display: none; }
     div.principal{ display: block; }
@@ -354,6 +355,7 @@ button:active {
     }
     .card_sm{
         width: 95%;
+        margin-bottom: 0.8rem;
     }
     .principal #ofertas{
         margin-top: 5vh;
@@ -402,11 +404,16 @@ button:active {
         border-radius: 7px;
         margin: 0.7rem;
     }
-    .Compactos, .Sedans, .Cabriolets, .SUV\'s, .Hatchbacks, .Camionetas, .Vans, .Camiones{
-        font-weight: 700;
+    .tarj_bot button{
         width: 77%;
+        height: 2rem;
+        font-weight: 500;
+        border: 2px solid var(--primary);
+        border-radius: .8rem;
         margin-top: 0;
         margin-left: 2.4rem;
+        margin-bottom: 0.7rem;
+        box-shadow: 3px 3px sienna;
     }
     .tarjetas_bot .filtros{
         grid-column-start: 2;
@@ -419,13 +426,15 @@ button:active {
         font-weight: 700;
         text-align: center;
         height: 1.8rem;
+        border: 2px solid var(--dark);
         border-radius: 0.7rem;
         margin-top: 1rem;
     }
     .tarjetas_bot .filtros button{
+        width: 7vw;
         font-family: "Quicksand", sans-serif;
         font-weight: 700;
-        width: 7vw;
+        align-self: flex-end;
         background-color: white;
         border-color: var(--dark);
         border-radius: 0.7rem;
