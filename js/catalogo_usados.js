@@ -362,7 +362,7 @@ let datos = {
         imagenAlt: 'VITO',
         precio: '18.000.000',
         modelo: 'VITO',
-        marca: 'Mercedes Benz',
+        marca: 'Mercedez Benz',
         kms: '86.000',
         año: 2022,
         modelo_detalle: '1.6 Cdi'
@@ -731,7 +731,7 @@ let datos = {
         imagenAlt: 'TAOS',
         precio: '18.750.000',
         modelo: 'TAOS',
-        marca: 'Volkswagen',
+        marca: 'Voklswagen',
         kms: '55.000',
         año: 2020,
         modelo_detalle: 'Trendline'
@@ -814,7 +814,7 @@ let datos = {
         imagenAlt: 'GOLF',
         precio: '18.600.000',
         modelo: 'GOLF',
-        marca: 'Volkswagen',
+        marca: 'Volklswagen',
         kms: '18.000',
         año: 2022,
         modelo_detalle: 'GTI'
@@ -1204,7 +1204,7 @@ function ocultar(){
 //----------------------------------------------
 
 document.addEventListener("click",(e)=>{
-    let eleccion = (e.target.id)
+    let eleccion = (e.target.className)
     if (eleccion === "Compactos" || eleccion === "Sedans" || eleccion === "Cabriolets" || eleccion === "SUV's" || eleccion === "Hatchbacks" || eleccion === "Camionetas" || eleccion === "Vans" || eleccion === "Camiones" ) {
         ocultar()    
         document.getElementById("elegido").innerText = 'Ud. eligió: '+ eleccion
