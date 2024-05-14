@@ -20,9 +20,11 @@ body {
     font-family: "Quicksand", sans-serif;
 }
 
-
 /* -------> baner carrusel <------- */
 
+.slide img{
+    height:auto;
+}
 .carousel img {
     max-height: 480px;
 }
@@ -30,6 +32,7 @@ body {
 .banner0km {
     max-height: auto;
 }
+
 
 .carousel-caption {
     display: flex;
@@ -80,14 +83,14 @@ body {
 }
 
 .producto0km button,
-.producto0km #filtros select,
-.producto0km #filtros button {
+.producto0km .filtros select,
+.producto0km .filtros button {
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
     box-shadow: 2px 2px sienna;
 }
 
-.producto0km #filtros option {
+.producto0km .filtros option {
     color: black;
     background-color: var(--light);
     font-family: "Quicksand", sans-serif;
@@ -99,19 +102,19 @@ body {
     margin: 0.5%;    
 }
 
-#filtros select,
-#filtros button {
+.filtros select,
+.filtros button {
     border: 2px solid var(--dark);
     border-radius: .5rem;
     height: 1.5rem;
     text-align: center;
 }
 
-#filtros select {
+.filtros select {
     margin-top: .5rem;
 }
 
-#filtros button {
+.filtros button {
     background-color: white;
 }
 
@@ -220,8 +223,8 @@ text-align: left;
         width: 90vw;
     }
 
-    #filtros select,
-    #filtros button {
+    .filtros select,
+    .filtros button {
         border: 2px solid var(--dark);
         border-radius: .5rem;
         height: 1.5rem;
