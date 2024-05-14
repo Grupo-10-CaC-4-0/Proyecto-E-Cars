@@ -25,6 +25,7 @@ legend {
     padding: 1rem;
     font-weight: 500;
     color: var(--primary);
+    transition: all 200ms;
 }
 
 .btn-primario:hover {
@@ -63,7 +64,13 @@ legend {
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(251, 215, 116, .25);
 }
-
+.form-control[type=file]::file-selector-button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 1rem;
+    border-color: var(--primary);
+  }
+  
 @media (min-width: 768px) {
     .seccionFormInfoContacto {
         display: flex;
