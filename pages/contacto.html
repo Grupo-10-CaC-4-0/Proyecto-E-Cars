@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grupo 10 - ..." />
+    <meta name="description" content="Página de un Concesionario de vehiculos" />
+    <meta name="keywords" content="concesionario,vehiculos,autos,camionetas,4x4" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contacto.css">
+    <link rel="stylesheet" href="/css/inicio.css">
+    <title>E-Cars - Vendé tu vehiculo</title>
+</head>
+
+<body>   
+    <main class="container">
+        <section class="my-4">
+            <h1 class="display-4">Vendé tu vehiculo en E-Cars</h1>
+            <h2 class="display-6">¿Listo para vender tu auto usado?</h2>
+            <p class="lead">Completa nuestro formulario y déjanos ocuparnos del resto. En E-Cars Usados, hacemos que
+                vender tu
+                vehículo sea rápido y sencillo.
+            </p>
+        </section>
+        <section class="my-4">
+            <form class="formVehiculo" name="formContacto">
+                <fieldset class="seccionFormInfoContacto">
+                    <legend>Información de Contacto</legend>
+                    <div class="mb-3 px-2">
+                        <label for="inputNombre" class="form-label">Nombre*</label>
+                        <input type="text" id="inputNombre" name="Nombre" class="form-control"
+                            placeholder="Ingrese su nombre..." required minlength="2" maxlength="30">
+                    </div>
+                    <div class="mb-3 px-2">
+                        <label for="inputApellido" class="form-label">Apellido*</label>
+                        <input type="text" id="inputApellido" name="Apellido" class="form-control"
+                            placeholder="Ingrese su apellido..." required minlength="2" maxlength="30">
+                    </div>
+                    <div class="mb-3 px-2">
+                        <label for="inputEmail" class="form-label">Correo Electrónico*</label>
+                        <input type="email" id="inputEmail" name="Email" class="form-control"
+                            placeholder="Ingrese su correo electrónico..." required minlength="2" maxlength="30">
+                    </div>
+                    <div class="mb-3 px-2">
+                        <label for="inputTelefono" class="form-label">Teléfono*</label>
+                        <input type="tel" id="inputTelefono" name="Telefono" minlength="10" maxlength="10" class="form-control"
+                            placeholder="Ej. 381 123-4567..." pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                    </div>
+                    <hr>
+                </fieldset>
+                <fieldset>
+                    <legend>Tipo de vehículo</legend>
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="radio" id="SUV" name="tipoVehiculo" value="SUV" />
+                        <label class="form-check-label" for="SUV">SUV</label>
+                    </div>
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="radio" id="Camioneta" name="tipoVehiculo" value="Camioneta" />
+                        <label class="form-check-label" for="Camioneta">Camioneta</label>
+                    </div>
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="radio" id="Cabriolet" name="tipoVehiculo" value="Cabriolet" />
+                        <label class="form-check-label" for="Cabriolet">Cabriolet</label>
+                    </div>
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="radio" id="Van" name="tipoVehiculo" value="Van" />
+                        <label class="form-check-label" for="Van">Van</label>
+                    </div>
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="radio" id="Compacto" name="tipoVehiculo" value="Compacto" />
+                        <label class="form-check-label" for="Compacto">Compacto</label>
+                    </div>
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="radio" id="Camión" name="tipoVehiculo" value="Camión" />
+                        <label class="form-check-label" for="Camión">Camión</label>
+                    </div>
+                    <hr>
+                </fieldset>
+                <fieldset class="seccionFormDatosVehiculos">
+                    <legend>Datos del vehículo</legend>
+                    <div>
+                        <div class="mb-3 px-2">
+                            <label for="selectMarca" class="form-label">Marca</label>
+                            <select id="selectMarca" name="Marca" aria-label="Selector de Marca" class="form-select"
+                                required>
+                                <option selected disabled hidden>Seleccione una marca...</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 px-2">
+                            <label for="selectModelo" class="form-label">Modelo</label>
+                            <select id="selectModelo" name="Modelo" aria-label="Selector de Modelo" class="form-select"
+                                required>
+                                <option selected disabled hidden>Seleccione un modelo...</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 px-2">
+                            <label for="inputAnio" class="form-label">Año*</label>
+                            <input type="number" id="inputAnio" name="Anio" placeholder="Ej. 2015"
+                                class="form-control" min="1900" max="2024" step="1" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 px-2">
+                        <label for="inputDesc" class="form-label">Descripción del vehiculo</label>
+                        <textarea name="Descripcion" id="inputDesc" rows="10" class="form-control"
+                            placeholder="Escriba algunos detalles y caracteristicas adicionales de su vehiculo..." maxlength="500"></textarea>
+                    </div>
+                    <hr>
+                    <div class="mb-3 px-2">
+                        <label for="imgVehiculo" class="form-label">Foto del vehiculo</label>
+                        <input class="form-control" type="file" id="imgVehiculo" multiple accept="image/png, image/jpeg" >
+                      </div>
+                    <hr>
+                </fieldset>
+                <button type="submit" class="btn-primario w-100">Enviar</button>
+            </form>
+        </section>
+        <section class="my-4">
+            <h3 class="display-6 mb-3">Nuestros datos de contacto</h3>
+            <article class="row row-cols-1 row-cols-md-2">
+                <ul class="list-unstyled col">
+                    <li class="list-item">
+                        <dl>
+                            <dt>Dirección</dt>
+                            <dd>Calle Ejemplo 123, Ciudad Ejemplo, Argentina</dd>
+                        </dl>
+                    </li>
+                    <li class="list-item">
+                        <dl>
+                            <dt>Correo electrónico:</dt>
+                            <dd>Ventas@ecars.com</dd>
+                        </dl>
+                    </li>
+                    <li class="list-item">
+                        <dl>
+                            <dt>Teléfono:</dt>
+                            <dd>(123) 456-7890</dd>
+                        </dl>
+                    </li>
+                    <li class="list-item">
+                        <dl>
+                            <dt>Horarios de atención:</dt>
+                            <dd class="py-3">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <dl>
+                                            <dt>Lunes a Viernes:</dt>
+                                            <dd>9:00 AM - 6:00 PM</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <dl>
+                                            <dt>Sábados:</dt>
+                                            <dd>9:00 AM - 1:00 PM</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <dl>
+                                            <dt>Domingos:</dt>
+                                            <dd>Cerrado</dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14241.607812313414!2d-65.20570236942137!3d-26.827164881687498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1714083654023!5m2!1ses-419!2sar"
+                         frameborder="0" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+        <div class="container-footer my-4">
+            <h2 class="titulo">Seguinos en nuestras redes</h2>
+
+            <div class="redes">
+                <a href="#"><img src="/img/inicio/facebook.svg" alt="facebbok"></a>
+                <a href="#"><img src="/img/inicio/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="/img/inicio/x.svg" alt="x"></a>
+            </div>
+            
+            <p class="titulo">© E-Cars 2024</p>
+        </div>
+       
+    </footer>
+    <script src="/js/selectMarcasModelos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
