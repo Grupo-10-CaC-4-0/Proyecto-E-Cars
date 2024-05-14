@@ -6,7 +6,6 @@
 html{
     background-color: var(--light);
     font-family: "Quicksand", sans-serif;
-   
 }
 
 .barraNav {
@@ -47,8 +46,7 @@ html{
 
 .container-tarjetas {
     width: 90%;
-    margin: 20px auto;
-    
+    margin: 20px auto;  
 }
 
 .tarjetas {
@@ -105,13 +103,15 @@ footer p {
     margin-bottom: 10px;
 }
 
+
 /* Medium */
 
 @media screen and (min-width:900px) {
-    
+ 
     .barraNav ul a{
         font-size: 1em;
     }
+
     .banner{
         height: 95vh;
     }
