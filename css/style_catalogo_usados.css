@@ -89,13 +89,12 @@ main{
     display: grid;
     align-self: center;
     align-content: center;
-    padding-top: 4.5vh;
+    padding-top: 0.5vh;
 }
 .botones{
     height: auto;
     display: grid;
     grid-template-columns: 5vw 42vw 6vw 42vw 5vw;
-    margin-top: 3.5rem;
 }
 .botones button{
     height: 2rem;
@@ -288,10 +287,10 @@ button:active {
     }
     #ofertas{
         width: 100%;
-        margin-top: 4.5rem;
+        margin-top: 0.5rem;
     }
     #ofertas .card_titulo h3{
-        margin-right: -2.5rem;
+        margin-right: 4rem;
     }
     .principal #ofertas{
         width: 75vw;
@@ -382,7 +381,7 @@ button:active {
         height: auto;
         display: grid;
         grid-template-columns: 23vw 23vw 23vw 23vw;
-        margin-top: 4.5vw;
+        margin-top: 0.5rem;
         margin-left: 4vw;
     }
     .tarjetas_bot .tarj_titulo{
