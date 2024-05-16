@@ -59,7 +59,7 @@
 
 ## Contacto
 - **Omar Orue:**
-    - Email: @gmail.com
+    - Email: omar.orue@live.com.ar
     - Github: https://github.com/omarorue
     - LinkedIn:
 - **Nahuel Romera:**
