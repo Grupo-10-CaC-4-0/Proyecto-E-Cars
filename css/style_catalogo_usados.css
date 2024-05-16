@@ -84,12 +84,6 @@ main{
 }
 .tarjetas_bot{ display: none; }
 .card_titulo .icoUp{ display:  none; }
-/*
-#templateMustache .op .RELLENO3{
-    border: 2px dashed black;
-    display: grid;
-}
-*/
 #posBot{
     width: 100vw;
     display: grid;
@@ -155,7 +149,6 @@ button:active {
     font-weight: 700;
     text-align: center;
 }
-/*-----------------------------------------------*/
 .principal #ofertas{
     width: 95vw;
     margin-left: 5vw;
@@ -163,9 +156,18 @@ button:active {
 }
 #ofertas .card_titulo h3{
     text-align: center;
-    font-size: x-large;
-    font-weight: 600;
-    padding-bottom: 0.5rem;
+    animation-name: ofertas;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes ofertas{
+    from{
+        font-weight: 100;
+    }
+    to{
+        font-weight: 700;
+    }
 }
 .card_sm{
     display: grid;
@@ -287,6 +289,9 @@ button:active {
     #ofertas{
         width: 100%;
         margin-top: 4.5rem;
+    }
+    #ofertas .card_titulo h3{
+        margin-right: -2.5rem;
     }
     .principal #ofertas{
         width: 75vw;
@@ -443,6 +448,9 @@ button:active {
         width: 7vw;
     }
     /*-------------------------------------------*/
+    #ofertas .card_titulo h3{
+        margin-right: 0;
+    }
     #persiana{
         width: 70vw;
         margin-left: 12rem;

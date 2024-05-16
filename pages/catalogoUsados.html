@@ -14,36 +14,34 @@
 <body>
 
     <header>
-        <div class="navegacion">
-            <nav class="navbar navbar-expand-xl bg-var(--primary)" aria-label="Seventh navbar example">
-                <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
-                    <div class="logo">
-                        <img src="../img/inicio/logo.png" alt="logo">
-                    </div>
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse" id="navbarsExampleXxl">
-                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/catalogonuevos.html">Nuevos Okm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active usados" aria-current="page" href="../pages/catalogoUsados.html">Usados</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg barraNav" style="background-color: #eb0a1e;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/index.html"><img src="/img/inicio/logo.png" alt="Logo de E-Cars" height="52"
+                  class="d-inline-block align-text-center"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-lg-4">
+                  <li>
+                    <a class="nav-link" href="/pages/catalogo0Km.html">Nuevos</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="/pages/catalogoUsados.html">Usados</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+                  </li>
+      
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main>
+        
         <div class="principal">
             <div id="posBot">
                 <div class="botones">
@@ -102,35 +100,35 @@
                         </a>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Compactos.jpg" alt="Compactos">
+                        <img src="../img/catalogo_usados/Compactos.jpg" alt="Compactos" class="Compactos">
                         <button class="Compactos">Compactos 3 puertas</button>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Sedans.jpg" alt="Sedans">
+                        <img src="../img/catalogo_usados/Sedans.jpg" alt="Sedans" class="Sedans">
                         <button class="Sedans">Sedan 4 puertas</button>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Cabriolets.jpg" alt="Cabriolets">
+                        <img src="../img/catalogo_usados/Cabriolets.jpg" alt="Cabriolets" class="Cabriolets">
                         <button class="Cabriolets">Cabriolets</button>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Suvs.jpg" alt="SUV's">
+                        <img src="../img/catalogo_usados/Suvs.jpg" alt="SUV's" class="SUV's">
                         <button class="SUV's">SUV's</button>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Hatchbacks.jpg"  alt="Hatchback">
+                        <img src="../img/catalogo_usados/Hatchbacks.jpg"  alt="Hatchback" class="Hatchbacks">
                         <button class="Hatchbacks">Hatchbacks</button>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Pickups.jpg" alt="Camionetas">
+                        <img src="../img/catalogo_usados/Pickups.jpg" alt="Camionetas" class="Camionetas">
                         <button class="Camionetas">Camionetas</button>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Cargo.jpg" alt="Vans">
+                        <img src="../img/catalogo_usados/Cargo.jpg" alt="Vans" class="Vans">
                         <button class="Vans">Van Cargo</button>
                     </div>
                     <div class="tarj_bot">
-                        <img src="../img/catalogo_usados/Camiones.jpg" alt="Camiones">
+                        <img src="../img/catalogo_usados/Camiones.jpg" alt="Camiones" class="Camiones">
                         <button class="Camiones">Camiones</button>
                     </div>
                     <div class="filtros">
@@ -177,22 +175,23 @@
                 <!-- Renderizado de Mustache -->
                 <div id="templateMustache"></div>
             </div>
-        </div>
+        </div> 
+
     </main>
 
     <footer>
 
         <div class="container-footer">
             <h2 class="titulo">Seguinos en nuestras redes</h2>
-
+      
             <div class="redes">
-                <a href="#"><img src="../img/inicio/facebook.svg" alt="facebbok"></a>
-                <a href="#"><img src="../img/inicio/instagram.svg" alt="instagram"></a>
-                <a href="#"><img src="../img/inicio/x.svg" alt="x"></a>
+              <a href="#"><img src="/img/inicio/facebook.svg" alt="facebbok"></a>
+              <a href="#"><img src="/img/inicio/instagram.svg" alt="instagram"></a>
+              <a href="#"><img src="/img/inicio/x.svg" alt="x"></a>
             </div>
-            
+      
             <p class="titulo">© E-Cars 2024</p>
-        </div>
+          </div>
        
     </footer>
 
