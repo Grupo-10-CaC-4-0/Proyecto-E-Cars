@@ -67,9 +67,9 @@
     - Github: https://github.com/NahuelRomera
     - LinkedIn:
 - **Adolfo Lujan:**
-    - Email: @gmail.com
+    - Email: adolfoglujan@gmail.com
     - Github: https://github.com/aglujan89
-    - LinkedIn:
+    - LinkedIn: https://www.linkedin.com/in/adolfo-lujan/
 - **Luciano Angeleri:** 
     - Email: lcnang@gmail.com
     - Github: https://github.com/LucianoAngeleri
