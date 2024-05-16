@@ -89,13 +89,12 @@ main{
     display: grid;
     align-self: center;
     align-content: center;
-    padding-top: 4.5vh;
+    padding-top: 0.5vh;
 }
 .botones{
     height: auto;
     display: grid;
     grid-template-columns: 5vw 42vw 6vw 42vw 5vw;
-    margin-top: 3.5rem;
 }
 .botones button{
     height: 2rem;
@@ -288,24 +287,32 @@ button:active {
     }
     #ofertas{
         width: 100%;
-        margin-top: 4.5rem;
+        margin-top: 0.5rem;
     }
     #ofertas .card_titulo h3{
-        margin-right: -2.5rem;
+        padding-left: 4rem;
     }
     .principal #ofertas{
         width: 75vw;
         margin-left: 0;
     }
     .card_titulo{
+        /*
         display: flex;
         justify-content: flex-end;
         margin: 1.8rem 0 1rem 0;
+        */
+        display: grid;
+        grid-template-columns: 85% 15%;
     }
     .card_titulo .icoUp{
         padding-right: 2rem;
-        padding-left: 12rem;
     }
+    .card_titulo .icoUp span{
+        padding-top: 0.4rem;
+        margin-right: 0.5rem;
+    }
+
     #templateMustacheOfertas{
         display: grid;
         grid-template-columns: 43% 43%;
@@ -382,7 +389,7 @@ button:active {
         height: auto;
         display: grid;
         grid-template-columns: 23vw 23vw 23vw 23vw;
-        margin-top: 4.5vw;
+        margin-top: 0.5vw;
         margin-left: 4vw;
     }
     .tarjetas_bot .tarj_titulo{
@@ -448,8 +455,11 @@ button:active {
         width: 7vw;
     }
     /*-------------------------------------------*/
+    #ofertas .card_titulo{
+        grid-template-columns: 100%;
+    }
     #ofertas .card_titulo h3{
-        margin-right: 0;
+        padding-left: 0;
     }
     #persiana{
         width: 70vw;
