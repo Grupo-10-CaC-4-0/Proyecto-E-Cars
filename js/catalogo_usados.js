@@ -415,10 +415,10 @@ let datos = {
         imagenAlt: 'HARD TOP',
         precio: '12.200.000',
         modelo: 'HARD TOP',
-        marca: 'Mini Cooper',
+        marca: 'Mini',
         kms: '12.000',
         año: 2021,
-        modelo_detalle: 'Mini'
+        modelo_detalle: 'Mini Cooper'
     },{
         tipo: 'Compactos',
         rutaImagen: 'KwidRenault.jpg',
