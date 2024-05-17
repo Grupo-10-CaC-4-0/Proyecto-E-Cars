@@ -272,7 +272,7 @@ let datos = {
         imagenAlt: 'C35',
         precio: '15.300.000',
         modelo: 'C35',
-        marca: 'DFSK',
+        marca: 'DFSK Donfeng Motors Corp',
         kms: '88.000',
         año: 2022,
         modelo_detalle: 'C35'
