@@ -47,7 +47,11 @@ footer .redes {
     display:flex;
 justify-content: space-between;
 }
-
+.container-footer h2{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
 /*------------------------------*/
 /* - MAIN - */
 main{
