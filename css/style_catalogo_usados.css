@@ -326,7 +326,7 @@ button:active {
 }
 
 /*ES PARA ESCRITORIO*/
-@media screen and (min-width:1200px) {
+@media screen and (min-width:980px) {
     div#posBot div.botones{ display: none; }
     div.principal{ display: block; }
     .card_titulo .icoUp{ display:  none; }
