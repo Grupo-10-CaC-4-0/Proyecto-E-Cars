@@ -26,6 +26,10 @@ html,button{
     background: var(--primary);
     font-family: "Rubik Mono One", monospace;
 }
+.navbar-nav{
+    align-items:flex-end;
+    margin-right: 2rem;
+}
 nav div .nombre{
     font-family: "Rubik Mono One", monospace;
     color: var(--light);
