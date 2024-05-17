@@ -48,24 +48,24 @@
 - **Luciano Angeleri:** Desarrollo de la página de contacto.
 
 ## Cronograma Tentativo
-- **Diseño y planificación:** 
-- **Desarrollo y programación:** 
+- **Diseño y planificación:** 1 semana 
+- **Desarrollo y programación:** 3 semanas 
+- **Testeo:** 1 semana 
 
 ## Recursos Externos
 - **Bootstrap:** Para la estructura y diseño responsivo.
 - **API de Google Maps:** Para mostrar la ubicación del concesionario.
 
 ## Desarrollos Futuros y Mejoras Potenciales
+- Desarrollo del backend y base de datos.
 
 ## Contacto
 - **Omar Orue:**
     - Email: omar.orue@live.com.ar
     - Github: https://github.com/omarorue
-    - LinkedIn:
 - **Nahuel Romera:**
     - Email: @gmail.com
     - Github: https://github.com/NahuelRomera
-    - LinkedIn:
 - **Adolfo Lujan:**
     - Email: adolfoglujan@gmail.com
     - Github: https://github.com/aglujan89
@@ -76,4 +76,4 @@
     - LinkedIn: https://www.linkedin.com/in/cesar-luciano-angeleri/
 
 ## Fecha de Entrega
-**Fecha de Entrega del Proyecto:** Mayo 2024
+**Fecha de Entrega del Proyecto:** 17 de Mayo 2024
