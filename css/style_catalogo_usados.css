@@ -83,7 +83,7 @@ main{
     grid-template-columns: 5vw 42vw 6vw 42vw 5vw;
 }
 .botones button{
-    height: 2rem;
+    height: auto;
     font-weight: 500;
     border: 2px solid var(--primary);
     border-radius: .8rem;
