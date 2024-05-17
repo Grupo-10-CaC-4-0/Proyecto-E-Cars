@@ -357,6 +357,11 @@ button:active {
         display: grid;
         grid-template-columns: 1;
     }
+    #posBot .tarjetas_bot .tarj_titulo h4{
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        font-size: xx-large;
+    }
     #templateMustacheOfertas{
         width: 84vw;
         display: grid;
