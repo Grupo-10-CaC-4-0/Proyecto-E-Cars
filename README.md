@@ -62,6 +62,7 @@
     - Email: omar.orue@live.com.ar
     - Github: https://github.com/omarorue
     - LinkedIn:
+    - DNI: 22992048
 - **Nahuel Romera:**
     - Email: @gmail.com
     - Github: https://github.com/NahuelRomera
