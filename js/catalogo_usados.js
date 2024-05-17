@@ -1217,6 +1217,7 @@ document.addEventListener("click",(e)=>{
             }
         }
         renderVehiculos(arr_elegido)
+        document.getElementById('persiana').scrollIntoView({ behavior: 'smooth' });
     }
 })
 
