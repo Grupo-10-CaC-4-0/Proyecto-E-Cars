@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6{
 }
 /*------------------------------*/
 /*  letra nav bar  */
-.navbar-nav a{
+.nav-link{
     font-family: "Rubik Mono One", monospace;
 }
 /*------------------------------*/
