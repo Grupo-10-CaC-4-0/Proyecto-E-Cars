@@ -37,6 +37,11 @@ footer {
     align-items: center;
     text-align: center;
 }
+footer .container-footer h2{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
 footer img {
     width: 50px;
     padding: 2%;
@@ -45,12 +50,7 @@ footer img {
 
 footer .redes {
     display:flex;
-justify-content: space-between;
-}
-.container-footer h2{
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-style: normal;
+    justify-content: space-between;
 }
 /*------------------------------*/
 /* - MAIN - */
