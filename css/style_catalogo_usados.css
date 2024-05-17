@@ -25,43 +25,10 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 400;
     font-style: normal;
 }
-/* -> AGREGADO DESDE INDEX <- */
-/*----------HEADER--------------*/
-.container-fluid {
-    background-color: var(--primary);
-}
-
-.container-fluid a {
-    text-decoration: none;
-    color: var(--secondary);
-}
-.navbar-collapse{
-    font-family: "Quicksand", sans-serif;
-}
-/*----------FOOTER--------------*/
-footer {
-    width: 100vw;
-    background: var(--dark);
-    color: var(--secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-footer .container-footer h2{
+/*------------------------------*/
+/*  letra nav bar  */
+.navbar-nav a{
     font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-footer img {
-    width: 50px;
-    padding: 2%;
-    margin: 15px auto;
-}
-
-footer .redes {
-    display:flex;
-    justify-content: space-between;
 }
 /*------------------------------*/
 /* - MAIN - */
