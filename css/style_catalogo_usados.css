@@ -18,47 +18,13 @@ html,button{
 }
 /* AGREGADO DESDE INDEX*/
 /*----------HEADER--------------*/
-.navegacion{
-    position:fixed ;
+.container-fluid {
+    background-color: var(--primary);
 }
-.navbar {
-    width: 100vw;
-    background: var(--primary);
-    font-family: "Rubik Mono One", monospace;
-}
-.navbar-nav{
-    align-items:flex-end;
-    margin-right: 2rem;
-}
-nav div .nombre{
-    font-family: "Rubik Mono One", monospace;
-    color: var(--light);
-    margin-right: 8rem;
-}
-nav div button.navbar-toggler{
-    width: 10vw;
-    height: auto;
-    border: 2px solid var(--dark);
-    box-shadow: 0 0;
-    margin-top: 0.2rem;
-}
-nav div button span{
-    margin-bottom: 0.2rem;
-}
-ul li a.nav-link{
-    font-family: "Rubik Mono One", monospace;
-    font-size: 1em;
-    color: var(--light);
-}
-ul li a.nav-link:hover{
+
+.container-fluid a {
+    text-decoration: none;
     color: var(--secondary);
-}
-ul li a.usados{
-    color: var(--secondary) !important;
-}
-.logo img{
-    width: 60px;
-    margin-left: 15px;
 }
 /*----------FOOTER--------------*/
 footer {
