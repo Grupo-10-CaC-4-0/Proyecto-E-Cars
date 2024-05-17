@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 400;
     font-style: normal;
 }
-/* AGREGADO DESDE INDEX*/
+/* -> AGREGADO DESDE INDEX <- */
 /*----------HEADER--------------*/
 .container-fluid {
     background-color: var(--primary);
@@ -34,6 +34,9 @@ h1,h2,h3,h4,h5,h6{
 .container-fluid a {
     text-decoration: none;
     color: var(--secondary);
+}
+.navbar-collapse{
+    font-family: "Quicksand", sans-serif;
 }
 /*----------FOOTER--------------*/
 footer {
