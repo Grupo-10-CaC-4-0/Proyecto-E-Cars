@@ -30,51 +30,44 @@ function validarSelect(select) {
         return false;
     }
 }
+function validarRadio(nombreRadios) {
+    const radios = document.getElementsByName(nombreRadios);
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            return true;
+        }
+    }
+    return false;
+}
 
-
-export function resumenValidaciones(inputNombre, inputApellido, inputEmail, inputTelefono, inputAnio, inputDesc) {
+export function resumenValidaciones(inputNombre, inputApellido, inputEmail, inputTelefono, selectMarca, selectModelo, inputAnio, inputDesc, nombreRadios) {
     let resumen = "";
-    // Validar Nombre
     if (!validarCantidadCaracteres(inputNombre, 2, 30)) {
-        resumen +=  `El nombre debe contener entre 2 y 30 caracteres.\n`
-    } else {
-        resumen = "";
+        resumen += "El <strong>nombre</strong> debe contener <strong>entre 2 y 30 caracteres</strong>.<br>"
     }
-    // Validar Apellido
     if (!validarCantidadCaracteres(inputApellido, 2, 30)) {
-        resumen +=  `El apellido debe contener entre 2 y 30 caracteres.\n`;
-    } else {
-        resumen = "";
+        resumen += "El <strong>apellido</strong> debe contener <strong>entre 2 y 30 caracteres</strong>.<br>";
     }
-    // Validar Email
     if (!validarEmail(inputEmail)) {
-        resumen +=  `Debe ingresar un correo electrónico válido.\n`;
-    } else {
-        resumen = "";
+        resumen += "Debe ingresar un <strong>correo electrónico válido</strong>.<br>";
     }
-    // Validar Teléfono
     if (!validarTelefono(inputTelefono)) {
-        resumen +=  `Debe ingresar un teléfono válido (10 dígitos).\n`;
-    } else {
-        resumen = "";
+        resumen += "Debe ingresar un <strong>teléfono válido (10 dígitos)</strong>.<br>";
     }
-    // Validar Año
     if (!validarAnio(inputAnio)) {
-        resumen += `Debe ingresar un año entre 1900 y 2024.\n`;
-    } else {
-        resumen = "";
+        resumen += "Debe ingresar un <strong>año entre 1900 y 2024</strong>.<br>";
     }
-    // Validar Marca
     if (!validarSelect(selectMarca)) {
-        resumen +=  `Debe seleccionar una marca.\n`;
-    } else {
-        resumen = "";
+        resumen += "Debe seleccionar <strong>una marca</strong>.<br>";
     }
-    // Validar Modelo
     if (!validarSelect(selectModelo)) {
-        resumen +=  `Debe seleccionar un modelo.\n`;
-    } else {
-        resumen = "";
+        resumen += `Debe seleccionar <strong>un modelo.</strong>.<br>`;
+    }
+    if (!validarCantidadCaracteres(inputDesc, 0, 500)) {
+        resumen += "El <strong>nombre</strong> debe contener <strong>entre 2 y 30 caracteres</strong>.<br>"
+    }
+    if (!validarRadio(nombreRadios)) {
+        resumen += "Debe seleccionar <strong>un tipo de vehículo</strong>.<br>";
     }
     return resumen
 }
