@@ -202,7 +202,7 @@ button:active {
     margin-bottom: 0.6rem;
 }
 /* --- ES PARA TABLET --- */
-@media screen and (min-width:720px) {
+@media screen and (min-width:768px) {
     .tarjetas_bot{ display: none; }
     .botones .icoUp{ display: none; }
     .botones .RELLENO{ display: none; }
@@ -293,7 +293,7 @@ button:active {
 }
 
 /*ES PARA ESCRITORIO*/
-@media screen and (min-width:980px) {
+@media screen and (min-width:992px) {
     div#posBot div.botones{ display: none; }
     div.principal{ display: block; }
     .card_titulo .icoUp{ display:  none; }
