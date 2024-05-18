@@ -306,9 +306,6 @@ button:active {
     div.principal{ display: block; }
     .card_titulo .icoUp{ display:  none; }
     #templateMustache .op .RELLENO3{ display: none; }
-    nav div .nombre{
-        margin-right: 65vw;
-    }
     #posBot{
         width: 100vw;
         display: grid;
