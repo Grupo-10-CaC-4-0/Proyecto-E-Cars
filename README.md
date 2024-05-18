@@ -64,7 +64,7 @@
     - Email: omar.orue@live.com.ar
     - Github: https://github.com/omarorue
 - **Nahuel Romera:**
-    - Email: @gmail.com
+    - Email: nahuelr93@gmail.com
     - Github: https://github.com/NahuelRomera
 - **Adolfo Lujan:**
     - Email: adolfoglujan@gmail.com
