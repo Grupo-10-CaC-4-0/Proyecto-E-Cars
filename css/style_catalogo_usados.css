@@ -143,6 +143,7 @@ button:active {
     border-radius: 0.8rem;
 }
 .card_sm h3{
+    font-family: "Quicksand", sans-serif;
     padding-left: 8px;
 }
 /*-----------------------------------------------*/
