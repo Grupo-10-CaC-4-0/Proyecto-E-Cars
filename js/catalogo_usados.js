@@ -1114,38 +1114,38 @@ let datos = {
 let datosOfertas = {
     ofertas: [
     {
-        marca: 'Marca',
-        modelo: 'Modelo',
+        marca: 'Renault',
+        modelo: 'Alaskan',
         imagen: 'AlaskanRenault.jpg',
         año: 2000,
         precio: '12.554.000'
     },{
-        marca: 'Marca',
-        modelo: 'Modelo',
+        marca: 'Renault',
+        modelo: 'Alaskan',
         imagen: 'AlaskanRenault.jpg',
         año: 2000,
         precio: '12.554.000'
     },{
-        marca: 'Marca',
-        modelo: 'Modelo',
+        marca: 'Renault',
+        modelo: 'Alaskan',
         imagen: 'AlaskanRenault.jpg',
         año: 2000,
         precio: '12.554.000'
     },{
-        marca: 'Marca',
-        modelo: 'Modelo',
+        marca: 'Renault',
+        modelo: 'Alaskan',
         imagen: 'AlaskanRenault.jpg',
         año: 2000,
         precio: '12.554.000'
     },{
-        marca: 'Marca',
-        modelo: 'Modelo',
+        marca: 'Renault',
+        modelo: 'Alaskan',
         imagen: 'AlaskanRenault.jpg',
         año: 2000,
         precio: '12.554.000'
     },{
-        marca: 'Marca',
-        modelo: 'Modelo',
+        marca: 'Renault',
+        modelo: 'Alaskan',
         imagen: 'AlaskanRenault.jpg',
         año: 2000,
         precio: '12.554.000'
@@ -1237,10 +1237,12 @@ function mostrar(f1, f2){
         document.getElementById("ofertas").style = 'display: none'
         document.getElementById("persiana").style = 'display: block'
         renderVehiculos (vacio)
+        document.getElementById('persiana').scrollIntoView({ behavior: 'smooth' })
     }
     else{
         ocultar()
         renderVehiculos(newElegido)
+        document.getElementById('persiana').scrollIntoView({ behavior: 'smooth' })
     }
 }
 
@@ -1277,6 +1279,7 @@ function filtro (op){
         ocultar()
         let vacio = {vehiculos:[]}
         renderVehiculos (vacio)
+        document.getElementById('persiana').scrollIntoView({ behavior: 'smooth' })
     }
 }
 
