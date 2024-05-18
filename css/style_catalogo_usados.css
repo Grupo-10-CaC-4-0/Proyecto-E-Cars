@@ -108,7 +108,6 @@ button:active {
     margin-bottom: 2rem;
 }
 #ofertas .card_titulo h3{
-    font-family: "Quicksand", sans-serif;
     text-align: center;
     animation-name: ofertas;
     animation-duration: 3s;
