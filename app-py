@@ -1,1 +1,45 @@
+from flask import Flask, render_template, request, redirect
+from datetime import date, datetime
+from controller_db import *
+
+app = Flask(__name__)
+
+def basicInfo(getTitle):
+    #Día actual
+    today = date.today()
+    #Fecha actual
+    now = datetime.now()
+    # Seccion
+    title = getTitle
+    return [title, today.strftime('%Y'), now]
+
+options_marca = ["Alfa Romeo","Aston Martin","Audi","Bentley","Chery","Chevrolet","Chrysler","Citroen","Dacia","Daewo","DFSK Donfeng Motors Corp","Dodge","Ds Automobiles","Fiat","Ford","Geely","GMC","Honda","Hyundai","Isuzu","Iveco","JAC motors","Jeep","Kia","Lada","Land Rover","Lexus","Lifan","Lincoln","Mercedes Benz","MG","Mini","Mitsubishi","Nissan","Opel","Peugeot","Porsche","Renault","Rolls Royce","Seat","Smart","SsangYong","Subaru","Suzuki","Tata","Tesla","Toyota","Volkswagen","Volvo"]
+    
+options_anios = []
+for i in range (2009, 2025):
+    options_anios.append(i)
+
+
+# home -> root
+@app.route("/")
+def home():
+    title="Home"
+    return render_template("index.html",title=basicInfo(title))
+
+@app.route("/catalogoNuevos")
+def catalogoNuevos():
+    title = "Catalogo Nuevos - 0 Km"
+    return render_template("catalogoNuevos.html", title=basicInfo(title))
+
+@app.route("/contacto")
+def contacto():
+    title = "Contacto"
+    return render_template("contacto.html", title=basicInfo(title))
+
+@app.route('/catalogoUsados/<tipo>)
+def catalogoUsados(tipo):
+    title = "Catalogo Usados"
+    prod = mostrarTipos(tipo)
+    return render_template("catalogoUsados.html", title=basicInfo(title), productos=prod, opciones=options_marca, anios=options_anios)
+    
 
