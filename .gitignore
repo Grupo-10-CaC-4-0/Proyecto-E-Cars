@@ -11,3 +11,10 @@ docs/
 temp/
 tmp/
 node_modules/
+
+#Entorno Virtual y Python
+.venv
+__pycache__
+
+#VS Code
+.vscode
