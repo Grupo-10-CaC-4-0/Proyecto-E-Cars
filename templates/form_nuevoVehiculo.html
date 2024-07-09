@@ -30,7 +30,7 @@
       </section>
       <section class="my-4">
         <h3 class="fs-4 mb-2">Rellena el formulario</h3>
-        <form class="formVehiculo" name="formVehiculo" id="formVehiculo" action="/add_vehiculo" method="POST">
+        <form class="formVehiculo" name="formVehiculo" id="formVehiculo" action="/add_vehiculo" method="POST" enctype="multipart/form-data">
           <fieldset>
             <legend>Tipo de vehículo</legend>
             <div class="form-check mx-3">
@@ -135,9 +135,13 @@
                 required />
             </div>
             <hr />
-            <div class="mb-3 px-2">
+            <!--<div class="mb-3 px-2">
               <label for="imgVehiculo" class="form-label">Foto del vehiculo</label>
               <input class="form-control" type="file" id="imgVehiculo" multiple accept="image/png, image/jpeg" />
+            </div>-->
+            <div class="mb-3 px-2">
+              <label for="inputRutaImagen" class="form-label">URL de Imágen del vehiculo</label>
+              <input type="url" id="inputRutaImagen" name="ruta_imagen" class="form-control" placeholder="Ej. https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Corsa_sport_2004.jpg/" required />
             </div>
             <hr />
           </fieldset>
@@ -164,6 +168,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-    <script src="{{url_for('static', filename='/js/formVehiculo.js')}}" type="module"></script>
+    <!--<script src="{{url_for('static', filename='/js/formVehiculo.js')}}" type="module"></script>-->
   </body>
 </html>

@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect
+from controller_db import cargar_nuevo_vehiculo, obtener_vehiculos
 
 app = Flask(__name__)
 
@@ -32,12 +33,22 @@ def cargar_pag_nuevo_vehiculo():
 #2)Añade el nuevo vehiculo
 @app.route("/add_vehiculo", methods=["POST"])
 def add_nuevo_vehiculo():
-    tipo = request.form("tipo")
-    precio = request.form("precio")
-    modelo = request.form("modelo")
-    marca = request.form("marca")
-    kms = request.form("kms")
-    modelo_detalle = request.form("modelo_detalle")
-    anio = request.form("anio")
-    cargar_nuevo_vehiculo(tipo=tipo,precio=precio, modelo=modelo, marca=marca, kms=kms, modelo_detalle=modelo_detalle,anio=anio)
-    return redirect("/catalogoUsados")
+    print(request.form)
+    tipo = request.form["tipo"]
+    print(request.form["tipo"])
+    ruta_imagen = request.form["ruta_imagen"]
+    modelo = request.form["modelo"]
+    precio = request.form["precio"]
+    marca = request.form["marca"]
+    kms = request.form["kms"]
+    modelo_detalle = request.form["modelo_detalle"]
+    anio = request.form["anio"]
+    imagen_alt = f"{marca} {modelo} {anio}"
+    cargar_nuevo_vehiculo(tipo=tipo,ruta_imagen=ruta_imagen, imagen_alt=imagen_alt ,precio=precio, modelo=modelo, marca=marca, kms=kms, modelo_detalle=modelo_detalle,anio=anio)
+    return redirect("/pruebaCatVehiculos")
+#Prueba para ver vehiculos
+@app.route("/pruebaCatVehiculos")
+def cargar_pag_cat_vehiculo():
+    vehiculos = obtener_vehiculos()
+    titulo="E-Cars - Vehiculos"
+    return render_template("muestraCatVehiculos.html", titulo=titulo, vehiculos=vehiculos)
