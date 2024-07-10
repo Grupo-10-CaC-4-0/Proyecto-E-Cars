@@ -33,9 +33,7 @@ def cargar_pag_nuevo_vehiculo():
 #2)Añade el nuevo vehiculo
 @app.route("/add_vehiculo", methods=["POST"])
 def add_nuevo_vehiculo():
-    print(request.form)
     tipo = request.form["tipo"]
-    print(request.form["tipo"])
     ruta_imagen = request.form["ruta_imagen"]
     modelo = request.form["modelo"]
     precio = request.form["precio"]
@@ -46,7 +44,7 @@ def add_nuevo_vehiculo():
     imagen_alt = f"{marca} {modelo} {anio}"
     cargar_nuevo_vehiculo(tipo=tipo,ruta_imagen=ruta_imagen, imagen_alt=imagen_alt ,precio=precio, modelo=modelo, marca=marca, kms=kms, modelo_detalle=modelo_detalle,anio=anio)
     return redirect("/pruebaCatVehiculos")
-#Prueba para ver vehiculos
+#Prueba para ver vehículos
 @app.route("/pruebaCatVehiculos")
 def cargar_pag_cat_vehiculo():
     vehiculos = obtener_vehiculos()

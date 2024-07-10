@@ -1,4 +1,4 @@
-import { resumenValidaciones } from "./helpers.js";
+import { resumenValidacionesContacto } from "./helpers.js";
 
 let formContacto = document.getElementById("formContacto")
 let alertaErrores = document.getElementById("alertaErrores")
@@ -18,7 +18,7 @@ formContacto.addEventListener("submit", obtenerDato);
 function obtenerDato(e) {
     e.preventDefault();
 
-    const resumen = resumenValidaciones(inputNombre.value, inputApellido.value, inputEmail.value, inputTelefono.value, selectMarca, selectModelo, inputAnio.value, inputDesc.value, radiotipoVehiculo)
+    const resumen = resumenValidacionesContacto(inputNombre.value, inputApellido.value, inputEmail.value, inputTelefono.value, selectMarca, selectModelo, inputAnio.value, inputDesc.value, radiotipoVehiculo)
     mostrarMensajesError(resumen);
     if (resumen.length === 0) {
         mostrarModal();

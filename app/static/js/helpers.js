@@ -40,7 +40,7 @@ function validarRadio(nombreRadios) {
     return false;
 }
 
-export function resumenValidaciones(inputNombre, inputApellido, inputEmail, inputTelefono, selectMarca, selectModelo, inputAnio, inputDesc, nombreRadios) {
+export function resumenValidacionesContacto(inputNombre, inputApellido, inputEmail, inputTelefono, selectMarca, selectModelo, inputAnio, inputDesc, nombreRadios) {
     let resumen = "";
     if (!validarCantidadCaracteres(inputNombre, 2, 30)) {
         resumen += "El <strong>nombre</strong> debe contener <strong>entre 2 y 30 caracteres</strong>.<br>"
@@ -65,6 +65,19 @@ export function resumenValidaciones(inputNombre, inputApellido, inputEmail, inpu
     }
     if (!validarCantidadCaracteres(inputDesc, 0, 500)) {
         resumen += "El <strong>nombre</strong> debe contener <strong>entre 2 y 30 caracteres</strong>.<br>"
+    }
+    if (!validarRadio(nombreRadios)) {
+        resumen += "Debe seleccionar <strong>un tipo de vehículo</strong>.<br>";
+    }
+    return resumen
+}
+export function resumenValidacionesVehiculo(inputNombre, inputApellido, inputEmail, inputTelefono, selectMarca, selectModelo, inputAnio, inputDesc, nombreRadios) {
+    let resumen = "";
+    if (!validarAnio(inputAnio)) {
+        resumen += "Debe ingresar un <strong>año entre 1900 y 2024</strong>.<br>";
+    }
+    if (!validarCantidadCaracteres(inputDesc, 0, 500)) {
+        resumen += "El <strong>detalle del modelo</strong> debe contener <strong>entre 2 y 30 caracteres</strong>.<br>"
     }
     if (!validarRadio(nombreRadios)) {
         resumen += "Debe seleccionar <strong>un tipo de vehículo</strong>.<br>";
