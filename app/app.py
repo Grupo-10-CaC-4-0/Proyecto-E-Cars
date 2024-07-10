@@ -17,9 +17,9 @@ def cargar_pag_0km():
 #Muestra la pagina de Usados
 
 # @app.route('/catalogoUsados')
-# def catalogoUsados(tipo):
-#     titulo = "E-Cars - Catalogo Usados"
-#     return render_template("catalogoUsados.html", titulo=titulo)
+# def catalogoUsados():
+    # titulo = "E-Cars - Catalogo Usados"
+    # return render_template("catalogoUsados.html", titulo=titulo)
 
 
 @app.route('/catalogoUsados/<tipo>')
@@ -34,3 +34,9 @@ def catalogoUsados(tipo):
 def pag_contacto():
     titulo="E-Cars - Contacto"
     return render_template("contacto.html",titulo=titulo)
+
+
+@app.route("/catalogoedicion")
+def catalogoedicion():
+    titulo="E-Cars - Catalogo Edición"
+    return render_template("catalogoedicion.html",titulo=titulo)
