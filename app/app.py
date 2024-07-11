@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from controller_db import cargar_nuevo_vehiculo, obtener_vehiculos
+from controller_db import *
 
 app = Flask(__name__)
 
@@ -14,10 +14,11 @@ def cargar_pag_0km():
     titulo="E-Cars - Catalogo de 0 KM"
     return render_template("catalogo0Km.html",titulo=titulo)
 #Muestra la pagina de Usados
-@app.route("/catalogoUsados")
-def cargar_pag_usados():
+@app.route("/catalogoUsados/<tipo>")
+def cargar_pag_usados(tipo):
     titulo="E-Cars - Catalogo de Usados"
-    return render_template("catalogoUsados.html",titulo=titulo)
+    autos = mostrarTipos(tipo)
+    return render_template("catalogoUsados.html",titulo=titulo,autos=autos)
 #Muestra la pagina de Contacto
 @app.route("/contacto")
 def cargar_pag_contacto():
@@ -50,3 +51,36 @@ def cargar_pag_cat_vehiculo():
     vehiculos = obtener_vehiculos()
     titulo="E-Cars - Vehiculos"
     return render_template("muestraCatVehiculos.html", titulo=titulo, vehiculos=vehiculos)
+
+#-------------------------------------------------
+#      Agregado para la edicion y borrado de datos
+#-------------------------------------------------
+@app.route("/manejoDatos")
+def manejoDatos():
+    title = "Manejo de Datos"
+    autos = todosLosAutos()
+    return render_template("manejoDatos.html", title=title, autos=autos)
+
+@app.route("/editar_auto/<int:id>")
+def editar_prod(id):
+    title = "Editar Auto"
+    auto = obtener_auto_por_id(id)
+    return render_template("editar_auto.html", title=title, auto=auto)
+
+@app.route('/borrar_auto/<int:id>')
+def delete_prod(id):
+    eliminar_auto(id)
+    return redirect("/")
+
+@app.route("/update_auto", methods=['POST'])
+def update_prod():
+    id_edit = request.form['auto_id']
+    marca_edit = request.form['auto_marca']
+    modelo_edit = request.form['auto_modelo']
+    precio_edit = request.form['auto_precio']
+    detalle_edit = request.form['auto_detalle']
+    tipo_edit = request.form['auto_tipo']
+    kms_edit = request.form['auto_kms']
+    anio_edit = request.form['auto_anio']
+    actualizar_auto(id_edit, marca_edit, modelo_edit, precio_edit, detalle_edit, tipo_edit, kms_edit, anio_edit)
+    return redirect("/manejoDatos")
