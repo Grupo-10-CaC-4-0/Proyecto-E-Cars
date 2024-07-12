@@ -25,17 +25,15 @@ def validar_url_imagen(url):
 
 def validar_radio(valor):
     tipos_de_vehiculo = [
-    "Hatchback",
-    "Utilitario",
-    "Electrico",
-    "Sedán",
-    "SUV",
-    "Camioneta",
-    "Cabriolet",
-    "Van",
-    "Compacto",
-    "Pick Up",
-    "Camión"]
+        "Compactos",
+        "Hatchbacks",
+        "Sedans",
+        "Camionetas",
+        "Cabriolets",
+        "Vans",
+        "SUVs",
+        "Camiones"
+    ]
     return valor in tipos_de_vehiculo
 
 def validar_vehiculo(marca, modelo, anio, kms, precio, ruta_imagen, modelo_detalle, tipo_vehiculo):

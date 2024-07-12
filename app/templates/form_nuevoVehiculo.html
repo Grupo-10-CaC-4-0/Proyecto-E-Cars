@@ -43,7 +43,7 @@
         <form class="formVehiculo" name="formVehiculo" id="formVehiculo" action="{{ url_for('add_nuevo_vehiculo') }}" method="POST" enctype="multipart/form-data">
           <fieldset>
             <legend>Tipo de vehículo</legend>
-            {% for tipo in ['Hatchback', 'Utilitario', 'Electrico', 'Sedán', 'SUV', 'Camioneta', 'Cabriolet', 'Van', 'Compacto', 'Pick Up', 'Camión'] %}
+            {% for tipo in ['Compactos', 'Hatchbacks', 'Sedans', 'Camionetas', 'Cabriolets', 'Vans', 'SUVs', 'Camiones'] %}
             <div class="form-check mx-3">
               <input class="form-check-input" type="radio" id="{{ tipo }}" name="tipo" value="{{ tipo }}" required {% if datos.get('tipo') == tipo %}checked{% endif %} />
               <label class="form-check-label" for="{{ tipo }}">{{ tipo }}</label>
