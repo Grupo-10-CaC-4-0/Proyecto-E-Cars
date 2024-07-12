@@ -2,19 +2,25 @@
 
 ## Título y Descripción del Proyecto
 **Título:** E-Cars - Web para compra y venta de Vehículos.
-![Logo E-Cars](/img/inicio/logo.png)  
+![Logo E-Cars](static/img/inicio/logo.png)  
 **Descripción:** Desarrollo de un sitio web para el concesionario de vehículos E-Cars, facilitando la venta de autos usados y la compra de autos nuevos y usados. El sitio permitirá a los usuarios completar formularios para vender sus vehículos, acceder a catálogos de autos disponibles y obtener información de contacto del concesionario.
 
 ## Público Objetivo
 **Público:** Personas interesadas en vender sus autos usados y compradores potenciales de vehículos nuevos y usados.
 
 ## Estructura del Sitio
-- **Inicio**
-- **Nuevos**
-- **Usados**
+### Etapa Frontend
+- **Inicio**: pagina principal de la web.
+- **Nuevos**: muestra un catalogo de vehículos nuevos/0Km.
+- **Usados**: muestra un catalogo de vehículos usados.
 - **Contacto**
+### Etapa Backend
+- **Botón para añadir un vehículo nuevo en el navbar**
+- **Formulario para añadir un nuevo vehículo**: agrega un nuevo vehículo en la base de datos de vehículos usados.
+- **Formulario para añadir un modificar vehículo**:modifica los datos de un vehículo existente en la base de datos de vehículos usados.
+- **Manejo de datos**: muestra un listado de todos los vehículos en la Base de datos.
 
-![Mapa de SItio](/img/Mapa%20del%20Sitio.png)
+![Mapa de Sitio](static/img/Mapa%20del%20Sitio.png)
 
 ## Diseño y Estilo
 **Estilo Visual:** Moderno y profesional, con un enfoque en la claridad y la facilidad de uso.  
@@ -42,9 +48,9 @@
 
 ## Responsabilidades del Equipo
 **Equipo:**
-- **Omar Orue:** Desarrollo del catálogo de vehiculos usados.
+- **Omar Orue:** Desarrollo del catálogo de vehículos usados.
 - **Nahuel Romera:** Desarrollo de la página de inicio, navbar y footer.
-- **Adolfo Lujan:** Desarrollo del catálogo de vehiculos nuevos.
+- **Adolfo Lujan:** Desarrollo del catálogo de vehículos nuevos.
 - **Luciano Angeleri:** Desarrollo de la página de contacto.
 
 ## Cronograma Tentativo
@@ -76,4 +82,5 @@
     - LinkedIn: https://www.linkedin.com/in/cesar-luciano-angeleri/
 
 ## Fecha de Entrega
-**Fecha de Entrega del Proyecto:** 17 de Mayo 2024
+**Fecha de Entrega del Proyecto - Etapa Frontend :** 17 de Mayo 2024
+**Fecha de Entrega del Proyecto - Etapa Backend:** 11 de Julio 2024
