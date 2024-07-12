@@ -119,7 +119,7 @@ body{
 }
 .datosAuto{
     display: grid;
-    grid-template-columns: 11% 70%;
+    grid-template-columns: 25% 50%;
     justify-content: center;
 }
 
