@@ -87,15 +87,13 @@ El backend está desarrollado en Flask y utiliza MySQL como base de datos. Las p
 2. **Leer (Read)**:
    - Visita en "/manejoDatos" o "/pruebaCatVehiculos" para ver todos los vehículos.
    - Usa "/catalogoUsados/<tipo>" para filtrar por tipo de vehículo.
-   
-   [!NOTE]
-   Al no estar implementado todavía el sistema de guardado de imágenes, es posible que no se muestren adecuadamente algunas imágenes. Ciertas imágenes fueron cargadas previamente en la carpeta "static/". Los nuevos vehículos cargados por el formulario utilizan un input para cargar las imágenes mediante una ruta URL y esta se guarda en la base de datos. Es por esta diferencia en la carga de de archivos y como se acceden a las rutas de las imágenes en los templates que se origina este problema.
+   **NOTA:**Al no estar implementado todavía el sistema de guardado de imágenes, es posible que no se muestren adecuadamente algunas imágenes. Ciertas imágenes fueron cargadas previamente en la carpeta "static/". Los nuevos vehículos cargados por el formulario utilizan un input para cargar las imágenes mediante una ruta URL y esta se guarda en la base de datos. Es por esta diferencia en la carga de de archivos y como se acceden a las rutas de las imágenes en los templates que se origina este problema.
 
-3. **Actualizar (Update)**:
+4. **Actualizar (Update)**:
    - Ve a "/manejoDatos" y selecciona "Editar" en el vehículo deseado.
    - Modifica los datos en el formulario y guarda los cambios.
 
-4. **Eliminar (Delete)**:
+5. **Eliminar (Delete)**:
    - En "/manejoDatos", elige "Borrar" para el vehículo que deseas eliminar.
 
 ## Mejoras Futuras
