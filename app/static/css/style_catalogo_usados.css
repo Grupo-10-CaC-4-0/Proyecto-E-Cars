@@ -102,9 +102,6 @@ body{
     padding-left: 0.7rem;
 }
 
-.descripcion_vehiculo3{
-    width: 40rem;
-}
 .precioIcons{
     display: flex;
     justify-content: space-between;
