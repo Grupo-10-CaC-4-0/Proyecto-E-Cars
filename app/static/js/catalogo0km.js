@@ -9,7 +9,7 @@ let destacados0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-fiat-pulse-abarth.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-fiat-pulse-abarth.jpg",
     },
     {
         marca: "Renault",
@@ -18,7 +18,7 @@ let destacados0km = [
         combustible: "Nafta",
         transmisión: "Manual",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-kangoo-step.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-kangoo-step.jpg",
     },
     {
         marca: "Nissan",
@@ -27,7 +27,7 @@ let destacados0km = [
         combustible: "Diesel",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-nissan-frontier.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-nissan-frontier.jpg",
     },
     {
         marca: "Peougeot",
@@ -36,7 +36,7 @@ let destacados0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-peugeot-208.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-peugeot-208.jpg",
     },
     {
         marca: "Renault",
@@ -45,7 +45,7 @@ let destacados0km = [
         combustible: "Electrico",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-kwid-etech.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-kwid-etech.jpg",
     },
     {
         marca: "Volkswagen",
@@ -54,7 +54,7 @@ let destacados0km = [
         combustible: "Diesel",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-vw-amarok.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-vw-amarok.jpg",
     },
     {
         marca: "Fiat",
@@ -63,7 +63,7 @@ let destacados0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-fiat-fastback.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-fiat-fastback.jpg",
     },
     {
         marca: "Jeep",
@@ -72,7 +72,7 @@ let destacados0km = [
         combustible: "Nafta",
         transmisión: "Manual",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-jeep-renegade.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-jeep-renegade.jpg",
     },
     {
         marca: "Nissan",
@@ -81,7 +81,7 @@ let destacados0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-nissan-sentra.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-nissan-sentra.jpg",
     }
 ]
 
@@ -99,7 +99,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-fiat-pulse-abarth.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-fiat-pulse-abarth.jpg",
     },
     {
         marca: "Renault",
@@ -108,7 +108,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Manual",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-kangoo-step.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-kangoo-step.jpg",
     },
     {
         marca: "Nissan",
@@ -117,7 +117,7 @@ let autos0km = [
         combustible: "Diesel",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-nissan-frontier.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-nissan-frontier.jpg",
     },
     {
         marca: "Peougeot",
@@ -126,7 +126,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-peugeot-208.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-peugeot-208.jpg",
     },
     {
         marca: "Renault",
@@ -135,7 +135,7 @@ let autos0km = [
         combustible: "Electrico",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-kwid-etech.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-kwid-etech.jpg",
     },
     {
         marca: "Volkswagen",
@@ -144,7 +144,7 @@ let autos0km = [
         combustible: "Diesel",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-vw-amarok.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-vw-amarok.jpg",
     },
     {
         marca: "Fiat",
@@ -153,7 +153,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-fiat-fastback.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-fiat-fastback.jpg",
     },
     {
         marca: "Jeep",
@@ -162,7 +162,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Manual",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-jeep-renegade.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-jeep-renegade.jpg",
     },
     {
         marca: "Jeep",
@@ -171,7 +171,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-jeep-compass.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-jeep-compass.jpg",
     }
     ,
     {
@@ -181,7 +181,7 @@ let autos0km = [
         combustible: "Diesel",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-jeep-commander.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-jeep-commander.jpg",
     }
     ,
     {
@@ -191,7 +191,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-nissan-sentra.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-nissan-sentra.jpg",
     }
     ,
     {
@@ -201,7 +201,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Manual",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-vw-virtus.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-vw-virtus.jpg",
     }
     ,
     {
@@ -211,7 +211,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Automático",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-fiat-cronos.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-fiat-cronos.jpg",
     }
     ,
     {
@@ -221,7 +221,7 @@ let autos0km = [
         combustible: "Nafta",
         transmisión: "Manual",
         km: "0",
-        imagensrc: "/img/catalog_0km/mini-renault-logan.jpg",
+        imagensrc: "/static/img/catalog_0km/mini-renault-logan.jpg",
     }
 ]
 
