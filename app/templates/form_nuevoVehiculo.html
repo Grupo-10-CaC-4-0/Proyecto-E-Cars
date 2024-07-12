@@ -13,10 +13,10 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{url_for('static', filename='/css/inicio.css')}}" />
-    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}" />
-    <link rel="stylesheet" href="{{url_for('static', filename='/css/contacto.css')}}" />
-    <link rel="shortcut icon" href="{{url_for('static', filename='/img/inicio/logo.png')}}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contacto.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/inicio/logo.png') }}" type="image/x-icon" />
     <title>{{ titulo }}</title>
   </head>
 
@@ -30,53 +30,25 @@
       </section>
       <section class="my-4">
         <h3 class="fs-4 mb-2">Rellena el formulario</h3>
-        <form class="formVehiculo" name="formVehiculo" id="formVehiculo" action="/add_vehiculo" method="POST" enctype="multipart/form-data">
+        {% if errores %}
+        <div class="alert alert-danger">
+          <span class="lead">Debes completar el formulario correctamente!</span>
+          <ul>
+            {% for error in errores %}
+              <li>{{ error|safe }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        <form class="formVehiculo" name="formVehiculo" id="formVehiculo" action="{{ url_for('add_nuevo_vehiculo') }}" method="POST" enctype="multipart/form-data">
           <fieldset>
             <legend>Tipo de vehículo</legend>
+            {% for tipo in ['Compactos', 'Hatchbacks', 'Sedans', 'Camionetas', 'Cabriolets', 'Vans', 'SUVs', 'Camiones'] %}
             <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Hatchback" name="tipo" value="Hatchback" />
-              <label class="form-check-label" for="Hatchback">Hatchback</label>
+              <input class="form-check-input" type="radio" id="{{ tipo }}" name="tipo" value="{{ tipo }}" required {% if datos.get('tipo') == tipo %}checked{% endif %} />
+              <label class="form-check-label" for="{{ tipo }}">{{ tipo }}</label>
             </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Utilitario" name="tipo" value="Utilitario" />
-              <label class="form-check-label" for="Utilitario">Utilitario</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Electrico" name="tipo" value="Electrico" />
-              <label class="form-check-label" for="Electrico">Electrico</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Sedán" name="tipo" value="Sedán" />
-              <label class="form-check-label" for="Sedán">Sedán</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="SUV" name="tipo" value="SUV" />
-              <label class="form-check-label" for="SUV">SUV</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Camioneta" name="tipo" value="Camioneta" />
-              <label class="form-check-label" for="Camioneta">Camioneta</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Cabriolet" name="tipo" value="Cabriolet" />
-              <label class="form-check-label" for="Cabriolet">Cabriolet</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Van" name="tipo" value="Van" />
-              <label class="form-check-label" for="Van">Van</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Compacto" name="tipo" value="Compacto" />
-              <label class="form-check-label" for="Compacto">Compacto</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="PickUp" name="tipo" value="Pick Up" />
-              <label class="form-check-label" for="PickUp">Pick Up</label>
-            </div>
-            <div class="form-check mx-3">
-              <input class="form-check-input" type="radio" id="Camión" name="tipo" value="Camión" />
-              <label class="form-check-label" for="Camión">Camión</label>
-            </div>
+            {% endfor %}
             <hr />
           </fieldset>
           <fieldset class="seccionFormDatosVehiculos">
@@ -90,11 +62,14 @@
                   name="modelo"
                   class="form-control"
                   placeholder="Ej. VIVACE"
-                  required />
+                  required
+                  minlength="2"
+                  maxlength="30"
+                  value="{{ datos.get('modelo', '') }}" />
               </div>
               <div class="mb-3 px-2">
                 <label for="inputMarca" class="form-label">Marca*</label>
-                <input type="text" id="inputMarca" name="marca" class="form-control" placeholder="Ej. Fiat" required />
+                <input type="text" id="inputMarca" name="marca" class="form-control" placeholder="Ej. Fiat" required minlength="2" maxlength="30" value="{{ datos.get('marca', '') }}" />
               </div>
               <div class="mb-3 px-2">
                 <label for="inputAnio" class="form-label">Año*</label>
@@ -104,11 +79,28 @@
                   name="anio"
                   placeholder="Ej. 2015"
                   class="form-control"
-                  min="1900"
+                  min="1901"
                   max="2024"
                   step="1"
-                  required />
+                  required
+                  value="{{ datos.get('anio', '') }}" />
               </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-center">
+              <div class="mb-3 px-2 w-100 ">
+                <label for="inputKms" class="form-label">Kilómetros*</label>
+                <input type="number" id="inputKms" name="kms" class="form-control" placeholder="Ej. 135000" required min="0" value="{{ datos.get('kms', '') }}" />
+              </div>
+              <div class="mb-3 px-2 w-100 ">
+                <label for="inputPrecio" class="form-label">Precio*</label>
+                <input
+                  type="number"
+                  id="inputPrecio"
+                  name="precio"
+                  class="form-control"
+                  placeholder="Ej. 8320000"
+                  required min="0" value="{{ datos.get('precio', '') }}"/>
+                </div>
             </div>
             <div class="mb-3 px-2">
               <label for="inputModeloDetalle" class="form-label">Detalle del modelo</label>
@@ -118,56 +110,27 @@
                 rows="3"
                 class="form-control"
                 placeholder="Escriba algunos detalles y caracteristicas adicionales de su vehiculo..."
-                maxlength="500"></textarea>
+                maxlength="500">{{ datos.get('modelo_detalle', '') }}</textarea>
             </div>
-            <div class="mb-3 px-2">
-              <label for="inputKms" class="form-label">Kilómetros*</label>
-              <input type="number" id="inputKms" name="kms" class="form-control" placeholder="Ej. 135000" required />
-            </div>
-            <div class="mb-3 px-2">
-              <label for="inputPrecio" class="form-label">Precio*</label>
-              <input
-                type="number"
-                id="inputPrecio"
-                name="precio"
-                class="form-control"
-                placeholder="Ej. 8320000"
-                required />
-            </div>
-            <hr />
             <!--<div class="mb-3 px-2">
               <label for="imgVehiculo" class="form-label">Foto del vehiculo</label>
               <input class="form-control" type="file" id="imgVehiculo" multiple accept="image/png, image/jpeg" />
-            </div>-->
+              </div>-->
+              <hr />
             <div class="mb-3 px-2">
               <label for="inputRutaImagen" class="form-label">URL de Imágen del vehiculo</label>
-              <input type="url" id="inputRutaImagen" name="ruta_imagen" class="form-control" placeholder="Ej. https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Corsa_sport_2004.jpg/" required />
+              <input type="url" id="inputRutaImagen" name="ruta_imagen" class="form-control" placeholder="Ej. https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Corsa_sport_2004.jpg/" required value="{{ datos.get('ruta_imagen', '') }}" />
             </div>
             <hr />
           </fieldset>
-          <div class="alert alert-danger mt-3 d-none" role="alert" id="alertaErrores"></div>
           <button type="submit" class="btn-primario w-100">Enviar</button>
-          <div class="modal fade" tabindex="-1" id="modalExito">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content text-dark">
-                <div class="modal-header">
-                  <h5 class="modal-title display-6 text-success">Carga exitosa!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p class="lead">El formulario se ha enviado con éxito.</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </form>
       </section>
     </main>
-    {% include "/defaults/footer.html" %}
+    {% include "defaults/footer.html" %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-    <!--<script src="{{url_for('static', filename='/js/formVehiculo.js')}}" type="module"></script>-->
   </body>
 </html>
