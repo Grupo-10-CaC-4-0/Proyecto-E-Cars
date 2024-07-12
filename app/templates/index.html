@@ -16,8 +16,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
 
-    <link rel="shortcut icon" href="img/inicio/logo.png" type="image/x-icon" />
-    <title>{{ titulo }}</title>
+      <link rel="shortcut icon" href="{{ url_for('static', filename='img/inicio/logo.png') }}" type="image/x-icon" />
+      <title>{{ titulo }}</title>
   </head>
   <body>
     {% include "defaults/header.html" %}

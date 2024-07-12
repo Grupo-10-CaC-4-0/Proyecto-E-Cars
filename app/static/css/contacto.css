@@ -21,6 +21,7 @@ legend {
 .btn-primario {
     border-color: var(--primary);
     border-radius: 1rem;
+    border: 2px solid var(--primary);
     background: var(--secondary);
     padding: 1rem;
     font-weight: 500;

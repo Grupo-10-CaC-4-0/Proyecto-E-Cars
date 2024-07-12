@@ -16,7 +16,7 @@ function validarTelefono(telefono) {
 
 function validarAnio(anio) {
     const year = parseInt(anio);
-    if (year >= 1900 && year <= 2024) {
+    if (year > 1900 && year <= 2024) {
         return true;
     } else {
         return false;
@@ -39,6 +39,13 @@ function validarRadio(nombreRadios) {
     }
     return false;
 }
+function validarURL(url) {
+    const pattern = /^(https?:\/\/.*\.(jpg|jpeg|png|gif|bmp|webp|JPG|JPEG|PNG|GIF|BMP|WEBP))$/;
+    return pattern.test(url);
+}
+function validarNumeroPositivo(numero) {
+    return /^[0-9]+$/.test(numero);
+}
 
 export function resumenValidacionesContacto(inputNombre, inputApellido, inputEmail, inputTelefono, selectMarca, selectModelo, inputAnio, inputDesc, nombreRadios) {
     let resumen = "";
@@ -55,7 +62,7 @@ export function resumenValidacionesContacto(inputNombre, inputApellido, inputEma
         resumen += "Debe ingresar un <strong>teléfono válido (10 dígitos)</strong>.<br>";
     }
     if (!validarAnio(inputAnio)) {
-        resumen += "Debe ingresar un <strong>año entre 1900 y 2024</strong>.<br>";
+        resumen += "Debe ingresar un <strong>año entre 1901 y 2024</strong>.<br>";
     }
     if (!validarSelect(selectMarca)) {
         resumen += "Debe seleccionar <strong>una marca</strong>.<br>";
@@ -71,16 +78,32 @@ export function resumenValidacionesContacto(inputNombre, inputApellido, inputEma
     }
     return resumen
 }
-export function resumenValidacionesVehiculo(inputNombre, inputApellido, inputEmail, inputTelefono, selectMarca, selectModelo, inputAnio, inputDesc, nombreRadios) {
+export function resumenValidacionesVehiculo(marca, modelo, anio, kms, precio, rutaImagen, modeloDetalle, tipoVehiculo) {
     let resumen = "";
-    if (!validarAnio(inputAnio)) {
-        resumen += "Debe ingresar un <strong>año entre 1900 y 2024</strong>.<br>";
+    
+    if (!validarCantidadCaracteres(marca, 1, 30)) {
+        resumen += "La <strong>marca</strong> debe contener entre 1 y 30 caracteres.<br>";
     }
-    if (!validarCantidadCaracteres(inputDesc, 0, 500)) {
-        resumen += "El <strong>detalle del modelo</strong> debe contener <strong>entre 2 y 30 caracteres</strong>.<br>"
+    if (!validarCantidadCaracteres(modelo, 1, 30)) {
+        resumen += "El <strong>modelo</strong> debe contener entre 1 y 30 caracteres.<br>";
     }
-    if (!validarRadio(nombreRadios)) {
-        resumen += "Debe seleccionar <strong>un tipo de vehículo</strong>.<br>";
+    if (!validarAnio(anio)) {
+        resumen += "Debe ingresar un <strong>año entre 1901 y 2024</strong>.<br>";
     }
-    return resumen
+    if (!validarNumeroPositivo(kms)) {
+        resumen += "Debe ingresar un número válido para los <strong>kilómetros</strong>.<br>";
+    }
+    if (!validarNumeroPositivo(precio)) {
+        resumen += "Debe ingresar un número válido para el <strong>precio</strong>.<br>";
+    }
+    if (!validarURL(rutaImagen)) {
+        resumen += "Debe ingresar una <strong>URL válida</strong> para la imagen.<br>";
+    }
+    if (!validarCantidadCaracteres(modeloDetalle, 0, 500)) {
+        resumen += "El <strong>detalle del modelo</strong> debe contener entre 0 y 500 caracteres.<br>";
+    }
+    if (!validarRadio(tipoVehiculo)) {
+        resumen += "Debe seleccionar un <strong>tipo de vehículo</strong>.<br>";
+    }
+    return resumen;
 }
