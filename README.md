@@ -2,7 +2,9 @@
 
 ## Título y Descripción del Proyecto
 **Título:** E-Cars - Web para compra y venta de Vehículos.
+
 ![Logo E-Cars](app/static/img/inicio/logo.png)  
+
 **Descripción:** Desarrollo de un sitio web para el concesionario de vehículos E-Cars, facilitando la venta de autos usados y la compra de autos nuevos y usados. El sitio permitirá a los usuarios completar formularios para vender sus vehículos, acceder a catálogos de autos disponibles y obtener información de contacto del concesionario.
 
 ## Público Objetivo
