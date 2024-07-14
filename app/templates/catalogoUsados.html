@@ -61,9 +61,15 @@
             <div class="container mostrarVehiculos">
                 {% for i in autos %}
                 <div class="cadaAuto">
-
                     <div class="imagVolver">
-                        <img class="imag_muestra" src="../static/img/catalogo_usados/{{i[1]}}/{{i[2]}}" alt="{{i[3]}}">
+                        {% if i[0] > 106 %}
+                        <!--
+                            <img class="imag_muestra" src="../static/img/car_std.svg"  style="width: 650px; height: 300px;" alt="auto">
+                        -->
+                            <img class="imag_muestra" src="{{i[2]}}" alt="auto">
+                        {% else %}
+                            <img class="imag_muestra" src="../static/img/catalogo_usados/{{i[1]}}/{{i[2]}}" alt="{{i[3]}}">
+                        {% endif %}
                         <div class="volver">
                             <a href="/catalogoUsados/None" alt= "Volver">
                                 <img src="../static/img/square-alt-arrow-up.svg" style="width:25px; border:0px">
